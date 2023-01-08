@@ -1,0 +1,22 @@
+---
+import "../styles/global.css";
+
+import Head from "../components/Head.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <Head
+    description="Genaro Bonavita portfolio"
+    image="/public/favicon.svg"
+    title="Genaro Bonavita"
+  />
+
+  <body>
+    <main>
+      <slot />
+      <Footer />
+    </main>
+  </body>
+</html>
