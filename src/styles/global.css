@@ -8,7 +8,7 @@
 
 :root {
   --primary-color: #171717;
-  --secondary-color: #444;
+  --secondary-color: #282828;
   --terciary-color: #da0037;
   --complement-color: #ededed;
 
@@ -16,8 +16,11 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1400px;
   padding: 0 0.5rem;
+
+  position: relative;
 
   text-align: left;
   font-family: Epilogue, Verdana, sans-serif;
@@ -27,14 +30,27 @@ body {
   line-height: 1.5;
 
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--text-color);
 }
 
 main {
-  background-color: #444;
+  background-color: var(--secondary-color);
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+a {
+  transition: color 0.4s;
+
+  color: #ccc;
+
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
