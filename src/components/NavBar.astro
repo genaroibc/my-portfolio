@@ -1,0 +1,172 @@
+---
+import navBarLinks from "@public/maps/navbarLinks.json";
+---
+
+<header id="page-header">
+  <nav id="navbar">
+    {
+      (navBarLinks as { href: string; title: string }[]).map(
+        ({ href, title }) => (
+          <a class="navbar-link" href={href}>
+            {title}
+          </a>
+        )
+      )
+    }
+  </nav>
+
+  <button aria-label="open menu button" id="navbar-btn">
+    <span class="hamburger-stick"></span>
+    <span class="hamburger-stick"></span>
+    <span class="hamburger-stick"></span>
+  </button>
+</header>
+
+<script>
+  const toggleHamburgerMenu = () => {
+    document.getElementById("navbar")?.classList.toggle("menu-visible");
+  };
+
+  document.addEventListener("click", e => {
+    const target = e.target as HTMLElement;
+
+    if (
+      target &&
+      (target.matches("#navbar a") ||
+        target.matches("#navbar-btn") ||
+        target.matches("#navbar-btn *"))
+    ) {
+      toggleHamburgerMenu();
+    }
+  });
+</script>
+
+<style>
+  a {
+    font-size: 1.4rem;
+  }
+
+  /* *** HEADER *** */
+  #page-header {
+    position: fixed;
+    z-index: 800;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--secondary-color);
+
+    box-shadow: 0px 5px 10px 5px #0006;
+  }
+
+  /* *** NAVBAR *** */
+  #navbar {
+    position: absolute;
+    left: 0;
+    top: -15vh;
+    z-index: 900;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    clip-path: circle(0 at 50% 0);
+    transition: clip-path 0.7s ease, top 0.7s ease;
+
+    background-color: var(--secondary-color);
+  }
+
+  .navbar-link {
+    padding: 0.8rem;
+  }
+
+  #navbar.menu-visible {
+    clip-path: circle(100% at 50% 50%);
+    top: 0;
+  }
+
+  #navbar-btn {
+    position: absolute;
+    right: 30px;
+    top: 84vh;
+    z-index: 1000;
+
+    width: 4rem;
+    height: 4rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    outline: 0;
+    background-color: var(--terciary-color);
+  }
+
+  #navbar-btn .hamburger-stick {
+    width: 100%;
+    height: 3.2px;
+    border-radius: 5px;
+
+    transition: transform 0.5s, opacity 0.5s;
+
+    transform-origin: left;
+
+    background-color: #fff;
+  }
+
+  #navbar.menu-visible ~ #navbar-btn .hamburger-stick:first-child {
+    transform: rotate(34.5deg) scaleX(1.2);
+  }
+
+  #navbar.menu-visible ~ #navbar-btn .hamburger-stick:nth-child(2) {
+    opacity: 0;
+  }
+
+  #navbar.menu-visible ~ #navbar-btn .hamburger-stick:nth-child(3) {
+    transform: rotate(-34.5deg) scaleX(1.2);
+  }
+
+  @media screen and (min-width: 768px) {
+    #page-header {
+      padding: 1.8rem;
+    }
+
+    #page-header #navbar.menu-visible {
+      top: unset;
+    }
+
+    .navbar-link {
+      padding: 0;
+    }
+
+    #page-header #navbar-btn {
+      display: none;
+    }
+
+    #navbar {
+      position: unset;
+      z-index: unset;
+      width: auto;
+      height: auto;
+
+      flex-direction: row;
+      justify-content: center;
+
+      font-size: 1.3rem;
+
+      flex-grow: 1;
+      clip-path: unset;
+    }
+  }
+</style>
