@@ -71,13 +71,17 @@ const COLOURS = [
     text-align: center;
     color: var(--color);
 
-    animation: neon 3s var(--delay) ease-out infinite alternate backwards;
+    animation: neon 5s var(--delay) ease-out infinite alternate backwards;
   }
 
   .word {
     -webkit-text-stroke: 1px var(--color);
 
     color: transparent;
+  }
+
+  .word:hover {
+    -webkit-text-stroke: 2px var(--color);
   }
 
   @keyframes neon {
