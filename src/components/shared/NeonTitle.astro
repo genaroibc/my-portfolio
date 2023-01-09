@@ -1,0 +1,98 @@
+---
+export interface Props {
+  content: string;
+  delay: number;
+}
+
+const { content, delay } = Astro.props;
+
+const COLOURS = [
+  "#23b1d8",
+  "#f7b500",
+  "#b733f9",
+  "#a0de59",
+  "#83d1ad",
+  "#dc5fe2"
+];
+---
+
+<div class="neonTitleContainer">
+  {
+    content.split("").map((char, index) => (
+      <div
+        style={`--color: ${COLOURS[index % COLOURS.length]}; --delay: ${
+          (delay / 1000) * index
+        }s;`}
+        class="wordContainer"
+        data-text={char}
+      >
+        <span class="word">{char}</span>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .neonTitleContainer {
+    position: relative;
+    display: flex;
+
+    justify-content: center;
+    font-size: 9rem;
+
+    max-width: 100%;
+    overflow: hidden;
+
+    line-height: normal;
+
+    gap: 0.5rem;
+  }
+
+  .wordContainer {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+  }
+
+  .wordContainer::before {
+    content: attr(data-text);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 0;
+
+    font-weight: 700;
+    overflow: hidden;
+    text-align: center;
+    color: var(--color);
+
+    animation: neon 3s var(--delay) ease-out infinite alternate;
+  }
+
+  .word {
+    -webkit-text-stroke: 1px var(--color);
+
+    color: transparent;
+    transition: 0.5s ease-out;
+  }
+
+  .word::after {
+    font-size: 1rem;
+    position: absolute;
+  }
+
+  @keyframes neon {
+    to {
+      height: 100%;
+
+      filter: drop-shadow(0 0 2rem var(--color));
+    }
+  }
+</style>
