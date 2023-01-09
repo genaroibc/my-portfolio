@@ -1,8 +1,9 @@
 ---
-import "../styles/global.css";
+import "src/styles/global.css";
 
-import Head from "../components/Head.astro";
-import Footer from "../components/Footer.astro";
+import Head from "src/components/Head.astro";
+import Footer from "src/components/Footer.astro";
+import NavBar from "src/components/NavBar.astro";
 ---
 
 <!DOCTYPE html>
@@ -14,9 +15,10 @@ import Footer from "../components/Footer.astro";
   />
 
   <body>
+    <NavBar />
     <main>
       <slot />
-      <Footer />
     </main>
+    <Footer />
   </body>
 </html>
