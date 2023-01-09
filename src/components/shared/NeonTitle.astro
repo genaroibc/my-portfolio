@@ -38,14 +38,12 @@ const COLOURS = [
     display: flex;
 
     justify-content: center;
-    font-size: 9rem;
 
-    max-width: 100%;
     overflow: hidden;
 
     line-height: normal;
 
-    gap: 0.5rem;
+    gap: 0.3rem;
   }
 
   .wordContainer {
@@ -73,23 +71,17 @@ const COLOURS = [
     text-align: center;
     color: var(--color);
 
-    animation: neon 3s var(--delay) ease-out infinite alternate;
+    animation: neon 3s var(--delay) ease-out infinite alternate backwards;
   }
 
   .word {
     -webkit-text-stroke: 1px var(--color);
 
     color: transparent;
-    transition: 0.5s ease-out;
-  }
-
-  .word::after {
-    font-size: 1rem;
-    position: absolute;
   }
 
   @keyframes neon {
-    to {
+    from {
       height: 100%;
 
       filter: drop-shadow(0 0 2rem var(--color));
