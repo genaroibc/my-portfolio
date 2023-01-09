@@ -1,0 +1,153 @@
+---
+type CarouselItem = {
+  title: string;
+  description: string;
+  imgDescription: string;
+  imageUrl: string;
+};
+
+export interface Props {
+  items: CarouselItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="container">
+  <div class="carousel">
+    {
+      items.map(({ description, imageUrl, imgDescription, title }, index) => (
+        <li style={`--rotationY: ${index * 60}deg`} class="item">
+          <img src={imageUrl} alt={imgDescription} />
+          <h5>{title}</h5>
+          <p>{description}</p>
+        </li>
+      ))
+    }
+  </div>
+</div>
+
+<nav>
+  <div class="next">Next</div>
+  <div class="prev">Prev</div>
+</nav>
+
+<script>
+  const $ = (selector: string) => document.querySelector(selector);
+
+  const $carousel = $(".carousel");
+  let currentRotation = 0;
+
+  $(".next")?.addEventListener("click", () => {
+    rotate("right");
+  });
+
+  $(".prev")?.addEventListener("click", () => {
+    rotate("left");
+  });
+
+  function rotate(dir: "right" | "left") {
+    if (dir === "left") currentRotation -= 60;
+    if (dir === "right") currentRotation += 60;
+
+    if ($carousel) {
+      // @ts-ignore
+      $carousel.style.transform = "rotateY(" + currentRotation + "deg)";
+    }
+  }
+</script>
+
+<style>
+  * {
+    -webkit-transform-origin: 50% 51%;
+    zoom: 1.005;
+    will-change: transform;
+  }
+
+  li {
+    list-style-type: none;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  p {
+    font-size: 0.6rem !important;
+  }
+
+  img {
+    width: 100px;
+    background-color: #fff;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 450px;
+    height: 400px;
+    position: relative;
+    perspective: 1000px;
+  }
+
+  .carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+
+  .item {
+    position: absolute;
+    background: #000;
+    width: 450px;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    transform: rotateY(var(--rotationY)) translateZ(400px);
+    will-change: transform;
+    transform-style: preserve-3d;
+    will-change: transform;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .next,
+  .prev {
+    color: #444;
+    top: 100px;
+    padding: 1em 2em;
+    cursor: pointer;
+    background: #ccc;
+    border-radius: 5px;
+    border-top: 1px solid #fff;
+    box-shadow: 0 5px 0 #999;
+    transition: box-shadow 0.1s, top 0.1s;
+  }
+
+  .next:hover,
+  .prev:hover {
+    color: #000;
+  }
+
+  .next:active,
+  .prev:active {
+    box-shadow: 0 1px 0 #999;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .next {
+  }
+
+  .prev {
+  }
+</style>
