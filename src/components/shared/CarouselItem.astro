@@ -19,8 +19,10 @@ const { description, imgUrl, imgDescription, title, index } = Astro.props;
   class="carouselItem"
 >
   <img src={imgUrl} alt={imgDescription} />
-  <h5>{title}</h5>
-  <p>{description}</p>
+  <div>
+    <h5>{title}</h5>
+    <p>{description}</p>
+  </div>
 </li>
 
 <style>
@@ -31,7 +33,7 @@ const { description, imgUrl, imgDescription, title, index } = Astro.props;
   }
 
   h5 {
-    margin: 0 auto;
+    margin: 0.5rem auto 0.7rem;
   }
 
   p {
@@ -39,9 +41,17 @@ const { description, imgUrl, imgDescription, title, index } = Astro.props;
     font-size: 0.8rem !important;
   }
 
+  div {
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+  }
   img {
     width: 70%;
-    background-color: #fff;
+
+    padding: 0.2rem;
+    background: linear-gradient(45deg, orange 50%, cyan);
+
+    border-radius: 5px;
   }
 
   .carouselItem {
@@ -53,31 +63,36 @@ const { description, imgUrl, imgDescription, title, index } = Astro.props;
 
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 0.8em;
     gap: 1rem;
 
     position: absolute;
-    background: #000;
+
     max-width: 50vw;
     min-width: 100px;
     width: 400px;
     height: auto;
+
     text-align: center;
+    border-radius: 5px;
     color: #fff;
+
     transform: rotateY(var(--rotationY)) translateZ(400px);
+    transition: opacity 0.3s ease-out, background 1s ease-out;
+
     will-change: transform;
     transform-style: preserve-3d;
-    will-change: transform;
-
     -webkit-font-smoothing: antialiased;
 
     opacity: 0.4;
 
-    transition: opacity 0.3s;
+    user-select: none;
   }
 
   .carouselItem[data-active] {
     opacity: 1;
+    background: linear-gradient(to left top, var(--terciary-color), blue);
+    user-select: auto;
   }
 
   @media screen and (max-width: 1000px) {
