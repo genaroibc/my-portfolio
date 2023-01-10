@@ -3,14 +3,14 @@ export type TCarouselItem = {
   title: string;
   description: string;
   imgDescription: string;
-  imageUrl: string;
+  imgUrl: string;
 };
 
 export interface Props extends TCarouselItem {
   index: number;
 }
 
-const { description, imageUrl, imgDescription, title, index } = Astro.props;
+const { description, imgUrl, imgDescription, title, index } = Astro.props;
 ---
 
 <li
@@ -18,7 +18,7 @@ const { description, imageUrl, imgDescription, title, index } = Astro.props;
   style={`--rotationY: ${index * 60}deg`}
   class="carouselItem"
 >
-  <img src={imageUrl} alt={imgDescription} />
+  <img src={imgUrl} alt={imgDescription} />
   <h5>{title}</h5>
   <p>{description}</p>
 </li>
@@ -30,12 +30,17 @@ const { description, imageUrl, imgDescription, title, index } = Astro.props;
     will-change: transform;
   }
 
+  h5 {
+    margin: 0 auto;
+  }
+
   p {
-    font-size: 0.6rem !important;
+    margin: 0 auto;
+    font-size: 0.8rem !important;
   }
 
   img {
-    width: 100px;
+    width: 70%;
     background-color: #fff;
   }
 
