@@ -1,59 +1,73 @@
 ---
-type CarouselItem = {
-  title: string;
-  description: string;
-  imgDescription: string;
-  imageUrl: string;
-};
-
+import type { TCarouselItem } from "./CarouselItem.astro";
+import CarouselItem from "./CarouselItem.astro";
 export interface Props {
-  items: CarouselItem[];
+  items: TCarouselItem[];
 }
 
 const { items } = Astro.props;
 ---
 
-<div class="container">
+<div class="carouselContainer">
   <div class="carousel">
-    {
-      items.map(({ description, imageUrl, imgDescription, title }, index) => (
-        <li style={`--rotationY: ${index * 60}deg`} class="item">
-          <img src={imageUrl} alt={imgDescription} />
-          <h5>{title}</h5>
-          <p>{description}</p>
-        </li>
-      ))
-    }
+    {items.map((item, index) => <CarouselItem {...item} index={index} />)}
   </div>
 </div>
 
 <nav>
-  <div class="next">Next</div>
   <div class="prev">Prev</div>
+  <div class="next">Next</div>
 </nav>
 
 <script>
   const $ = (selector: string) => document.querySelector(selector);
+  const $$ = (selector: string) => document.querySelectorAll(selector);
 
   const $carousel = $(".carousel");
+  const $$slides = Array.from($$(".carouselItem"));
   let currentRotation = 0;
+  let currentIndex = 0;
 
   $(".next")?.addEventListener("click", () => {
-    rotate("right");
-  });
-
-  $(".prev")?.addEventListener("click", () => {
     rotate("left");
   });
 
-  function rotate(dir: "right" | "left") {
-    if (dir === "left") currentRotation -= 60;
-    if (dir === "right") currentRotation += 60;
+  $(".prev")?.addEventListener("click", () => {
+    rotate("right");
+  });
 
-    if ($carousel) {
-      // @ts-ignore
-      $carousel.style.transform = "rotateY(" + currentRotation + "deg)";
+  const setAsVisible = (element: Element | undefined) => {
+    if (!element) return;
+    element.setAttribute("data-active", "true");
+  };
+
+  const setAsInvisible = (element: Element | undefined) => {
+    if (!element) return;
+    element.removeAttribute("data-active");
+  };
+
+  function rotate(dir: "right" | "left") {
+    if (dir === "left") {
+      currentRotation -= 60;
+      currentIndex++;
+
+      const $prevSlide = $$slides.at((currentIndex - 1) % $$slides.length);
+      setAsInvisible($prevSlide);
     }
+
+    if (dir === "right") {
+      currentRotation += 60;
+      currentIndex--;
+
+      const $nextSlide = $$slides.at((currentIndex + 1) % $$slides.length);
+      setAsInvisible($nextSlide);
+    }
+
+    const $currentSlide = $$slides.at(currentIndex % $$slides.length);
+    setAsVisible($currentSlide);
+
+    // @ts-ignore
+    $carousel.style.transform = "rotateY(" + currentRotation + "deg)";
   }
 </script>
 
@@ -64,56 +78,39 @@ const { items } = Astro.props;
     will-change: transform;
   }
 
-  li {
-    list-style-type: none;
-    list-style: none;
+  .carouselContainer {
+    margin: 12rem auto 2rem;
 
-    display: flex;
-    flex-direction: column;
+    width: 400px;
+    height: 40vh;
+    position: relative;
+    perspective: 1000px;
 
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  p {
-    font-size: 0.6rem !important;
-  }
-
-  img {
-    width: 100px;
     background-color: #fff;
   }
 
-  .container {
-    margin: 0 auto;
-    width: 450px;
-    height: 400px;
-    position: relative;
-    perspective: 1000px;
-  }
-
   .carousel {
-    height: 100%;
-    width: 100%;
+    width: 400px;
     position: absolute;
     transform-style: preserve-3d;
     transition: transform 1s;
+
+    background-color: #ff0000;
   }
 
-  .item {
-    position: absolute;
-    background: #000;
-    width: 450px;
-    height: auto;
-    text-align: center;
-    color: #fff;
-    transform: rotateY(var(--rotationY)) translateZ(400px);
-    will-change: transform;
-    transform-style: preserve-3d;
-    will-change: transform;
-    -webkit-font-smoothing: antialiased;
+  @media screen and (max-width: 1000px) {
+    .carouselContainer {
+      width: 50vw;
+      height: 30vh;
+    }
+
+    .carousel {
+      width: 50vw;
+    }
+
+    .nav {
+      margin-top: 60vh;
+    }
   }
 
   .next,
