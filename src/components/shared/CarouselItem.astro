@@ -1,0 +1,84 @@
+---
+export type TCarouselItem = {
+  title: string;
+  description: string;
+  imgDescription: string;
+  imageUrl: string;
+};
+
+export interface Props extends TCarouselItem {
+  index: number;
+}
+
+const { description, imageUrl, imgDescription, title, index } = Astro.props;
+---
+
+<li
+  data-active={index === 0}
+  style={`--rotationY: ${index * 60}deg`}
+  class="carouselItem"
+>
+  <img src={imageUrl} alt={imgDescription} />
+  <h5>{title}</h5>
+  <p>{description}</p>
+</li>
+
+<style>
+  * {
+    -webkit-transform-origin: 50% 51%;
+    zoom: 1.005;
+    will-change: transform;
+  }
+
+  p {
+    font-size: 0.6rem !important;
+  }
+
+  img {
+    width: 100px;
+    background-color: #fff;
+  }
+
+  .carouselItem {
+    list-style-type: none;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+
+    position: absolute;
+    background: #000;
+    max-width: 50vw;
+    min-width: 100px;
+    width: 400px;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    transform: rotateY(var(--rotationY)) translateZ(400px);
+    will-change: transform;
+    transform-style: preserve-3d;
+    will-change: transform;
+
+    -webkit-font-smoothing: antialiased;
+
+    opacity: 0.4;
+
+    transition: opacity 0.3s;
+  }
+
+  .carouselItem[data-active] {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .carouselItem {
+      width: 50vw;
+      transform: rotateY(var(--rotationY)) translateZ(50vw);
+    }
+  }
+</style>
