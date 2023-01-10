@@ -1,55 +1,11 @@
 ---
 import Carousel from "./shared/Carousel.astro";
+import projectsMap from "public/maps/projectsMap.json";
 ---
 
 <section>
   <h3>My projects</h3>
   <h4>Some projects I've worked in:</h4>
 
-  <Carousel
-    items={[
-      {
-        description:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna allorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        imageUrl: "/favicon.svg",
-        imgDescription: "image",
-        title: "My First Item"
-      },
-      {
-        description:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna allorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        imageUrl: "/favicon.svg",
-        imgDescription: "image",
-        title: "My Second Item"
-      },
-      {
-        description:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna allorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        imageUrl: "/favicon.svg",
-        imgDescription: "image",
-        title: "My Third Item"
-      },
-      {
-        description:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna allorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        imageUrl: "/favicon.svg",
-        imgDescription: "image",
-        title: "My Third Item"
-      },
-      {
-        description:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna allorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        imageUrl: "/favicon.svg",
-        imgDescription: "image",
-        title: "My Third Item"
-      },
-      {
-        description:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna allorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        imageUrl: "/favicon.svg",
-        imgDescription: "image",
-        title: "My Third Item"
-      }
-    ]}
-  />
+  <Carousel items={projectsMap} />
 </section>
