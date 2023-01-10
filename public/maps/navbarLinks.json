@@ -1,18 +1,18 @@
 [
   {
-    "href": "/",
-    "title": "Home"
+    "href": "#home",
+    "title": "home"
   },
   {
     "href": "#about",
-    "title": "About"
+    "title": "about"
   },
   {
     "href": "#projects",
-    "title": "Projects"
+    "title": "projects"
   },
   {
     "href": "#contact",
-    "title": "Contact"
+    "title": "contact"
   }
 ]

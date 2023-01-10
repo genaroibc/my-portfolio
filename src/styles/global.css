@@ -26,10 +26,11 @@
   --text-color: #f6f6f6;
 
   font-size: 10px;
-
   background-color: var(--primary-color);
 
   counter-reset: sectionTitle;
+
+  scroll-behavior: smooth;
 }
 
 body {
@@ -58,11 +59,12 @@ main {
 }
 
 section {
-  margin: 30vh auto;
+  margin: 20vh auto;
   padding: 1rem;
 }
 
 h3 {
+  padding-top: 7rem;
   font-size: 2rem;
 }
 
