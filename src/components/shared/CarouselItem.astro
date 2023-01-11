@@ -1,16 +1,35 @@
 ---
+import Icon from "./Icon.astro";
+
+type IconName =
+  | "aws"
+  | "blockchain"
+  | "bootstrap"
+  | "css"
+  | "git"
+  | "github"
+  | "html"
+  | "js"
+  | "mongodb"
+  | "nextjs"
+  | "node"
+  | "react"
+  | "ts";
+
 export type TCarouselItem = {
   title: string;
   description: string;
   imgDescription: string;
   imgUrl: string;
+  technologies: IconName[];
 };
 
 export interface Props extends TCarouselItem {
   index: number;
 }
 
-const { description, imgUrl, imgDescription, title, index } = Astro.props;
+const { description, imgUrl, imgDescription, title, index, technologies } =
+  Astro.props;
 ---
 
 <li
@@ -22,6 +41,8 @@ const { description, imgUrl, imgDescription, title, index } = Astro.props;
   <div>
     <h5>{title}</h5>
     <p>{description}</p>
+
+    {technologies.map(icon => <Icon size={"tiny"} name={icon} />)}
   </div>
 </li>
 
@@ -63,7 +84,7 @@ const { description, imgUrl, imgDescription, title, index } = Astro.props;
 
     justify-content: center;
     align-items: center;
-    padding: 0.8em;
+    padding: 0.5em;
     gap: 1rem;
 
     position: absolute;
