@@ -28,7 +28,15 @@ const { description, imgUrl, imgDescription, title, index, technologies } =
     <h5>{title}</h5>
     <p>{description}</p>
 
-    {technologies.map(icon => <Icon size={"tiny"} name={icon} />)}
+    <ul>
+      {
+        technologies.map(icon => (
+          <li>
+            <Icon size={"tiny"} name={icon} />
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </li>
 
@@ -53,6 +61,7 @@ const { description, imgUrl, imgDescription, title, index, technologies } =
     background-color: var(--primary-color);
   }
   img {
+    display: block;
     width: 70%;
 
     padding: 0.2rem;
@@ -61,6 +70,27 @@ const { description, imgUrl, imgDescription, title, index, technologies } =
     border-radius: 5px;
   }
 
+  ul {
+    background-color: var(--terciary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+
+    gap: 0.5rem;
+
+    width: max-content;
+    margin: 1rem auto;
+    border-radius: 5px;
+  }
+
+  li {
+    display: flex;
+  }
+
+  li img {
+    align-self: center;
+  }
   .carouselItem {
     list-style-type: none;
     list-style: none;
