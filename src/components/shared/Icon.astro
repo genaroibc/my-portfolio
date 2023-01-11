@@ -1,20 +1,5 @@
 ---
-type IconSize = "tiny" | "small" | "medium" | "large" | "huge";
-
-type IconName =
-  | "aws"
-  | "blockchain"
-  | "bootstrap"
-  | "css"
-  | "git"
-  | "github"
-  | "html"
-  | "js"
-  | "mongodb"
-  | "nextjs"
-  | "node"
-  | "react"
-  | "ts";
+import type { IconName, IconSize } from "src/types";
 
 const SIZES: Record<IconSize, number> = {
   tiny: 20,
