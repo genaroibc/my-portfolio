@@ -1,0 +1,53 @@
+---
+type IconSize = "tiny" | "small" | "medium" | "large" | "huge";
+
+type IconName =
+  | "aws"
+  | "blockchain"
+  | "bootstrap"
+  | "css"
+  | "git"
+  | "github"
+  | "html"
+  | "js"
+  | "mongodb"
+  | "nextjs"
+  | "node"
+  | "react"
+  | "ts";
+
+const SIZES: Record<IconSize, number> = {
+  tiny: 20,
+  small: 30,
+  medium: 40,
+  large: 50,
+  huge: 60
+};
+
+export type TIcon = {
+  name: IconName;
+  size: IconSize;
+};
+
+export interface Props extends TIcon {}
+
+const { size, name } = Astro.props;
+---
+
+<img
+  src={`/svg/techs/${name}.svg`}
+  width={SIZES[size]}
+  height={SIZES[size]}
+  alt={`${name} icon`}
+/>
+
+<style>
+  img {
+    filter: brightness(0);
+    transition: filter 0.4s ease-out;
+  }
+
+  img:hover {
+    filter: brightness(1);
+  }
+</style>
