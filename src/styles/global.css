@@ -101,6 +101,11 @@ p {
   font-size: 1.2rem;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 @media screen and (min-width: 552px) {
   :root {
     font-size: 16px;
