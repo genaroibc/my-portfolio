@@ -110,6 +110,7 @@ const { items } = Astro.props;
     .carouselContainer {
       width: 50vw;
       height: 30vh;
+      margin: 20vw auto 30vw;
     }
 
     .carousel {
@@ -119,6 +120,12 @@ const { items } = Astro.props;
     nav {
       left: -40%;
       right: -40%;
+    }
+  }
+
+  @media screen and (max-width: 552px) {
+    .carouselContainer {
+      margin: 15vw auto 0;
     }
   }
 
