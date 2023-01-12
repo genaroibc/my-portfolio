@@ -49,13 +49,13 @@ const { index } = Astro.props;
 
     opacity: 0.4;
 
-    user-select: none;
+    pointer-events: none;
   }
 
   .carouselItem[data-active] {
     opacity: 1;
     background: linear-gradient(to left top, var(--terciary-color), blue);
-    user-select: auto;
+    pointer-events: auto;
   }
 
   @media screen and (max-width: 1000px) {
