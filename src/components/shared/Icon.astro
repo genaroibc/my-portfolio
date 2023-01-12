@@ -1,14 +1,6 @@
 ---
 import type { IconName, IconSize } from "src/types";
 
-const SIZES: Record<IconSize, number> = {
-  tiny: 20,
-  small: 30,
-  medium: 40,
-  large: 50,
-  huge: 60
-};
-
 export type TIcon = {
   name: IconName;
   size: IconSize;
@@ -21,8 +13,7 @@ const { size, name } = Astro.props;
 
 <img
   src={`/svg/techs/${name}.svg`}
-  width={SIZES[size]}
-  height={SIZES[size]}
+  class={`icon-${size}`}
   alt={`${name} icon`}
 />
 
@@ -34,5 +25,25 @@ const { size, name } = Astro.props;
 
   img:hover {
     filter: brightness(1);
+  }
+
+  .icon-tiny {
+    width: 1rem;
+  }
+
+  .icon-small {
+    width: 1.5rem;
+  }
+
+  .icon-medium {
+    width: 2rem;
+  }
+
+  .icon-large {
+    width: 2.5rem;
+  }
+
+  .icon-huge {
+    width: 3rem;
   }
 </style>
