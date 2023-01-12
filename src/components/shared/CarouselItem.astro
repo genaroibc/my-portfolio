@@ -20,6 +20,7 @@ const { index } = Astro.props;
     zoom: 1.005;
     will-change: transform;
   }
+
   .carouselItem {
     display: flex;
     flex-direction: column;
@@ -48,14 +49,11 @@ const { index } = Astro.props;
     -webkit-font-smoothing: antialiased;
 
     opacity: 0.4;
-
-    pointer-events: none;
   }
 
   .carouselItem[data-active] {
     opacity: 1;
     background: linear-gradient(to left top, var(--terciary-color), blue);
-    pointer-events: auto;
   }
 
   @media screen and (max-width: 1000px) {

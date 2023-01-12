@@ -24,7 +24,7 @@ const { description, imgUrl, imgDescription, title, technologies } =
   <h5>{title}</h5>
   <p>{description}</p>
 
-  <ul>
+  <ul class="techsList">
     {
       technologies.map(icon => (
         <li>
@@ -47,10 +47,13 @@ const { description, imgUrl, imgDescription, title, technologies } =
 
   div {
     padding: 0.5rem;
-    background-color: var(--primary-color);
   }
 
-  ul {
+  div:hover {
+    filter: brightness(1);
+  }
+
+  .techsList {
     background-color: var(--terciary-color);
     display: flex;
     justify-content: center;
@@ -60,7 +63,7 @@ const { description, imgUrl, imgDescription, title, technologies } =
     gap: 0.5rem;
 
     width: max-content;
-    margin: 1rem auto;
+    margin: 1rem auto 0;
     border-radius: 5px;
   }
 

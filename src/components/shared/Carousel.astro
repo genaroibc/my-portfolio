@@ -86,7 +86,7 @@ const { items } = Astro.props;
   }
 
   .carouselContainer {
-    margin: 12rem auto 2rem;
+    margin: 12rem auto;
 
     width: 400px;
     height: 40vh;
@@ -109,7 +109,6 @@ const { items } = Astro.props;
     left: -60%;
     right: -60%;
 
-    pointer-events: none;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -149,8 +148,6 @@ const { items } = Astro.props;
     border-top: 1px solid #fff;
     box-shadow: 0 5px 0 #999;
     transition: box-shadow 0.1s, top 0.1s;
-
-    pointer-events: auto;
   }
 
   .next:hover,
