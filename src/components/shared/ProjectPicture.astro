@@ -2,23 +2,29 @@
 export interface Props {
   imgUrl: string;
   imgDescription: string;
+  projectUrl: string;
+  repoUrl: string;
 }
 
-const { imgDescription, imgUrl } = Astro.props;
+const { imgDescription, imgUrl, projectUrl, repoUrl } = Astro.props;
 ---
 
 <picture class="imgContainer">
   <div class="imgContainer__icons">
-    <img
-      class="imgContainer__icons__icon"
-      src="/svg/code.svg"
-      alt="code icon"
-    />
-    <img
-      class="imgContainer__icons__icon"
-      src="/svg/newtab.svg"
-      alt="new tab icon"
-    />
+    <a href={repoUrl}>
+      <img
+        class="imgContainer__icons__icon"
+        src="/svg/code.svg"
+        alt="code icon"
+      />
+    </a>
+    <a href={projectUrl}>
+      <img
+        class="imgContainer__icons__icon"
+        src="/svg/newtab.svg"
+        alt="new tab icon"
+      /></a
+    >
   </div>
 
   <img class="imgContainer__img" src={imgUrl} alt={imgDescription} />
@@ -55,13 +61,13 @@ const { imgDescription, imgUrl } = Astro.props;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25%;
+    gap: 10%;
 
     transition: transform 1s ease;
     background-color: #0007;
   }
 
   .imgContainer__icons__icon {
-    width: 8%;
+    width: 25%;
   }
 </style>
