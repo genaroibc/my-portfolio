@@ -19,7 +19,7 @@ import Icon from "./shared/Icon.astro";
       >
     </nav>
     <div class="skills">
-      <div class="skillsBox" data-tech-section="learned">
+      <div class="skillsBox">
         <input checked type="radio" name="skills" id="learned" />
         <Icon name={"ts"} size={"medium"} />
         <Icon name={"ts"} size={"medium"} />
@@ -27,7 +27,7 @@ import Icon from "./shared/Icon.astro";
         <Icon name={"ts"} size={"medium"} />
       </div>
 
-      <div class="skillsBox" data-tech-section="learning">
+      <div class="skillsBox">
         <input type="radio" name="skills" id="learning" />
         <Icon name={"node"} size={"medium"} />
         <Icon name={"node"} size={"medium"} />
@@ -35,7 +35,7 @@ import Icon from "./shared/Icon.astro";
         <Icon name={"node"} size={"medium"} />
       </div>
 
-      <div class="skillsBox" data-tech-section="interested">
+      <div class="skillsBox">
         <input type="radio" name="skills" id="interested" />
         <Icon name={"aws"} size={"medium"} />
         <Icon name={"aws"} size={"medium"} />
@@ -130,5 +130,11 @@ import Icon from "./shared/Icon.astro";
 
     border-radius: 5px;
     cursor: pointer;
+
+    transition: box-shadow 0.1s !important;
+    box-shadow: 0 5px 0 var(--complement-color);
+  }
+  .navbar__option:active {
+    box-shadow: 0 1px 0 var(--complement-color);
   }
 </style>
