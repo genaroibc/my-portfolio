@@ -1,22 +1,9 @@
 ---
-import Icon from "./Icon.astro";
-import type { IconName } from "src/types";
-import ProjectPicture from "./ProjectPicture.astro";
-
-export type TCarouselItem = {
-  title: string;
-  description: string;
-  imgDescription: string;
-  imgUrl: string;
-  technologies: IconName[];
-};
-
-export interface Props extends TCarouselItem {
+export interface Props {
   index: number;
 }
 
-const { description, imgUrl, imgDescription, title, index, technologies } =
-  Astro.props;
+const { index } = Astro.props;
 ---
 
 <li
@@ -24,22 +11,7 @@ const { description, imgUrl, imgDescription, title, index, technologies } =
   style={`--rotationY: ${index * 60}deg`}
   class="carouselItem"
 >
-  <ProjectPicture imgDescription={imgDescription} imgUrl={imgUrl} />
-
-  <div>
-    <h5>{title}</h5>
-    <p>{description}</p>
-
-    <ul>
-      {
-        technologies.map(icon => (
-          <li>
-            <Icon size={"tiny"} name={icon} />
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+  <slot />
 </li>
 
 <style>
@@ -47,41 +19,6 @@ const { description, imgUrl, imgDescription, title, index, technologies } =
     -webkit-transform-origin: 50% 51%;
     zoom: 1.005;
     will-change: transform;
-  }
-
-  h5 {
-    margin: 0.5rem auto 0.7rem;
-  }
-
-  p {
-    margin: 0 auto;
-    font-size: 0.8rem !important;
-  }
-
-  div {
-    padding: 0.5rem;
-    background-color: var(--primary-color);
-  }
-
-  ul {
-    background-color: var(--terciary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-
-    gap: 0.5rem;
-
-    width: max-content;
-    margin: 1rem auto;
-    border-radius: 5px;
-  }
-
-  li {
-    display: flex;
-  }
-  li img {
-    align-self: center;
   }
   .carouselItem {
     display: flex;

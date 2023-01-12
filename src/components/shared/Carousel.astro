@@ -1,8 +1,9 @@
 ---
-import type { TCarouselItem } from "./CarouselItem.astro";
+import type { TProjectCard } from "./ProjectCard.astro";
 import CarouselItem from "./CarouselItem.astro";
+import ProjectCard from "./ProjectCard.astro";
 export interface Props {
-  items: TCarouselItem[];
+  items: TProjectCard[];
 }
 
 const { items } = Astro.props;
@@ -10,8 +11,15 @@ const { items } = Astro.props;
 
 <div class="carouselContainer">
   <div class="carousel">
-    {items.map((item, index) => <CarouselItem {...item} index={index} />)}
+    {
+      items.map((item, index) => (
+        <CarouselItem index={index}>
+          <ProjectCard {...item} />
+        </CarouselItem>
+      ))
+    }
   </div>
+
   <nav>
     <div class="prev">◄</div>
     <div class="next">►</div>
