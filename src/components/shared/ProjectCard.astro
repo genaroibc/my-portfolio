@@ -1,0 +1,73 @@
+---
+import Icon from "./Icon.astro";
+import ProjectPicture from "./ProjectPicture.astro";
+
+import type { IconName } from "src/types";
+
+export type TProjectCard = {
+  title: string;
+  description: string;
+  imgDescription: string;
+  imgUrl: string;
+  technologies: IconName[];
+};
+
+export interface Props extends TProjectCard {}
+
+const { description, imgUrl, imgDescription, title, technologies } =
+  Astro.props;
+---
+
+<ProjectPicture imgDescription={imgDescription} imgUrl={imgUrl} />
+
+<div>
+  <h5>{title}</h5>
+  <p>{description}</p>
+
+  <ul>
+    {
+      technologies.map(icon => (
+        <li>
+          <Icon size={"tiny"} name={icon} />
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  h5 {
+    margin: 0.5rem auto 0.7rem;
+  }
+
+  p {
+    margin: 0 auto;
+    font-size: 0.8rem !important;
+  }
+
+  div {
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+  }
+
+  ul {
+    background-color: var(--terciary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+
+    gap: 0.5rem;
+
+    width: max-content;
+    margin: 1rem auto;
+    border-radius: 5px;
+  }
+
+  li {
+    display: flex;
+  }
+  li img {
+    align-self: center;
+  }
+</style>
