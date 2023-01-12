@@ -1,10 +1,73 @@
+---
+import contactMap from "public/maps/contactMap.json";
+---
+
 <section>
   <h3 id="contact">Contact Me</h3>
   <h4>Let's build something amazing!</h4>
 
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestias
-    ratione quidem iste quo corporis odio vero aliquam tempora perspiciatis
-    velit, odit, excepturi delectus veniam ducimus incidunt id commodi? Maxime.
-  </p>
+  <article>
+    <p>You can contact me at:</p>
+    <ul>
+      {
+        contactMap.map(({ href, imageSrc, title }) => (
+          <li>
+            <a href={href} target="_blank">
+              <img src={imageSrc} alt={title} />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
 </section>
+
+<style>
+  article {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    background-color: var(--complement-color);
+    color: #000;
+    border-radius: 5px;
+
+    padding: 1rem;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+  }
+
+  p {
+    margin: 0px;
+  }
+
+  a {
+    max-width: 25px;
+    display: flex;
+
+    align-items: center;
+
+    border-radius: 50%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    article {
+      flex-direction: row;
+    }
+
+    a {
+      max-width: 50px;
+    }
+  }
+</style>
