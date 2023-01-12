@@ -1,6 +1,7 @@
 ---
 import Icon from "./Icon.astro";
 import type { IconName } from "src/types";
+import ProjectPicture from "./ProjectPicture.astro";
 
 export type TCarouselItem = {
   title: string;
@@ -23,7 +24,8 @@ const { description, imgUrl, imgDescription, title, index, technologies } =
   style={`--rotationY: ${index * 60}deg`}
   class="carouselItem"
 >
-  <img src={imgUrl} alt={imgDescription} />
+  <ProjectPicture imgDescription={imgDescription} imgUrl={imgUrl} />
+
   <div>
     <h5>{title}</h5>
     <p>{description}</p>
@@ -59,15 +61,6 @@ const { description, imgUrl, imgDescription, title, index, technologies } =
   div {
     padding: 0.5rem;
     background-color: var(--primary-color);
-  }
-  img {
-    display: block;
-    width: 70%;
-
-    padding: 0.2rem;
-    background: linear-gradient(45deg, orange 50%, cyan);
-
-    border-radius: 5px;
   }
 
   ul {

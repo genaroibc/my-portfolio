@@ -1,0 +1,67 @@
+---
+export interface Props {
+  imgUrl: string;
+  imgDescription: string;
+}
+
+const { imgDescription, imgUrl } = Astro.props;
+---
+
+<picture class="imgContainer">
+  <div class="imgContainer__icons">
+    <img
+      class="imgContainer__icons__icon"
+      src="/svg/code.svg"
+      alt="code icon"
+    />
+    <img
+      class="imgContainer__icons__icon"
+      src="/svg/newtab.svg"
+      alt="new tab icon"
+    />
+  </div>
+
+  <img class="imgContainer__img" src={imgUrl} alt={imgDescription} />
+</picture>
+
+<style>
+  .imgContainer {
+    width: 70%;
+
+    position: relative;
+    overflow: hidden;
+  }
+
+  .imgContainer:hover .imgContainer__icons {
+    transform: translateY(0%);
+  }
+
+  .imgContainer__img {
+    display: block;
+
+    padding: 0.2rem;
+
+    background: linear-gradient(45deg, orange 50%, cyan);
+    border-radius: 5px;
+  }
+
+  .imgContainer__icons {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    transform: translateY(100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25%;
+
+    transition: transform 1s ease;
+    background-color: #0007;
+  }
+
+  .imgContainer__icons__icon {
+    width: 8%;
+  }
+</style>
