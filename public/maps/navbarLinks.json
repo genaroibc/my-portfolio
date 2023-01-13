@@ -8,12 +8,12 @@
     "title": "about"
   },
   {
-    "href": "#skills",
-    "title": "skills"
-  },
-  {
     "href": "#projects",
     "title": "projects"
+  },
+  {
+    "href": "#skills",
+    "title": "skills"
   },
   {
     "href": "#contact",
