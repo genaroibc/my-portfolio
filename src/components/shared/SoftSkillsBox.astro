@@ -1,0 +1,16 @@
+---
+import { SOFT_SKILLS_LIST } from "public/maps/skillsList.json";
+---
+
+<div>
+  <h4>Soft Skills</h4>
+
+  {
+    SOFT_SKILLS_LIST.map(({ content, title }) => (
+      <article>
+        <h5>{title}</h5>
+        <p>{content}</p>
+      </article>
+    ))
+  }
+</div>
