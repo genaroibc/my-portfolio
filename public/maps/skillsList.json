@@ -1,0 +1,42 @@
+{
+  "HARD_SKILLS": {
+    "SECTIONS": [
+      {
+        "sectionId": "learned",
+        "title": "🧠 I know"
+      },
+      {
+        "sectionId": "learning",
+        "title": "🌱  I'm learning"
+      },
+      {
+        "sectionId": "interested",
+        "title": "🔎 I'm interested in"
+      }
+    ],
+    "ITEMS": [
+      {
+        "sectionId": "learned",
+        "items": [
+          "html",
+          "css",
+          "js",
+          "react",
+          "node",
+          "git",
+          "nextjs",
+          "bootstrap",
+          "mongodb"
+        ]
+      },
+      {
+        "sectionId": "learning",
+        "items": ["ts"]
+      },
+      {
+        "sectionId": "interested",
+        "items": ["python", "aws", "blockchain"]
+      }
+    ]
+  }
+}
