@@ -17,9 +17,14 @@ import type { IconName } from "src/types";
 
   <div class="skills">
     {
-      HARD_SKILLS.ITEMS.map(({ items, sectionId }) => (
+      HARD_SKILLS.ITEMS.map(({ items, sectionId }, index) => (
         <div class="skillsBox">
-          <input checked type="radio" name="skills" id={sectionId} />
+          <input
+            checked={index === 0}
+            type="radio"
+            name="skills"
+            id={sectionId}
+          />
           {(items as IconName[]).map(tech => (
             <Icon name={tech} size={"medium"} />
           ))}
