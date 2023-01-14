@@ -39,6 +39,7 @@
           "html",
           "css",
           "js",
+          "ts",
           "react",
           "node",
           "git",
@@ -49,11 +50,11 @@
       },
       {
         "sectionId": "learning",
-        "items": ["ts"]
+        "items": ["rtl", "jest", "astro"]
       },
       {
         "sectionId": "interested",
-        "items": ["python", "aws", "blockchain"]
+        "items": ["python", "rust", "aws", "blockchain"]
       }
     ]
   }

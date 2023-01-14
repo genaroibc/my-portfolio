@@ -1,4 +1,8 @@
 export type IconName =
+  | "rust"
+  | "jest"
+  | "rtl"
+  | "astro"
   | "aws"
   | "blockchain"
   | "bootstrap"
