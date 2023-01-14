@@ -2,15 +2,47 @@
 import { SOFT_SKILLS_LIST } from "public/maps/skillsList.json";
 ---
 
-<div>
+<div class="softSkillsCont">
   <h4>Soft Skills</h4>
 
   {
     SOFT_SKILLS_LIST.map(({ content, title }) => (
-      <article>
+      <article class="softSkillsItem">
         <h5>{title}</h5>
-        <p>{content}</p>
+        <div class="pgphContainer">
+          <p>{content}</p>
+        </div>
       </article>
     ))
   }
 </div>
+
+<style>
+  .softSkillsCont {
+    margin-top: 5rem;
+  }
+
+  .softSkillsItem {
+    padding: 1rem;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .pgphContainer p {
+    overflow: hidden;
+    padding: 0.7rem;
+    margin: 0;
+
+    border-radius: 5px;
+
+    transform: translateY(200%);
+
+    transition: transform 0.4s, background-color 0.7s ease;
+  }
+
+  .softSkillsItem:hover .pgphContainer p {
+    transform: translateY(0%);
+
+    background-color: var(--terciary-color);
+  }
+</style>

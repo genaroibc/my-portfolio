@@ -70,13 +70,18 @@ h3 {
 
 h4 {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 h3::before {
   counter-increment: sectionTitle;
 
   content: counter(sectionTitle) ". ";
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 1.4rem;
 }
 
 img {
@@ -104,6 +109,8 @@ p {
 ul,
 li {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 552px) {
