@@ -1,12 +1,12 @@
 ---
-import Carousel from "./shared/Carousel.astro";
 import projectsMap from "public/maps/projectsMap.json";
 import type { TProjectCard } from "./shared/ProjectCard.astro";
+import ProjectsCarousel from "./shared/ProjectsCarousel.astro";
 ---
 
 <section>
   <h3 id="projects">My projects</h3>
   <h4>Some projects I've worked in:</h4>
 
-  <Carousel items={projectsMap as TProjectCard[]} />
+  <ProjectsCarousel items={projectsMap as TProjectCard[]} />
 </section>
