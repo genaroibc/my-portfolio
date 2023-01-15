@@ -1,0 +1,179 @@
+---
+import Icon from "./Icon.astro";
+import type { TProjectCard } from "./ProjectCard.astro";
+import ProjectPicture from "./ProjectPicture.astro";
+
+export interface Props {
+  items: TProjectCard[];
+}
+
+const { items } = Astro.props;
+---
+
+<script>
+  const $goToLeftBtn = document.getElementById("goToLeftBtn");
+  const $goToRightBtn = document.getElementById("goToRightBtn");
+
+  const $carousel = document.getElementById("carousel");
+
+  function carouselScroll(dir: "left" | "right") {
+    const carouselScroll = $carousel?.scrollLeft ?? 0;
+    const carouselWidth = $carousel?.clientWidth ?? 0;
+
+    const scroll =
+      dir === "left"
+        ? carouselScroll - carouselWidth
+        : carouselScroll + carouselWidth;
+
+    return $carousel?.scrollTo({
+      left: scroll,
+      behavior: "smooth"
+    });
+  }
+
+  $goToRightBtn?.addEventListener("click", () => {
+    carouselScroll("right");
+  });
+
+  $goToLeftBtn?.addEventListener("click", () => {
+    carouselScroll("left");
+  });
+</script>
+
+<nav>
+  <button id="goToLeftBtn">
+    <img src="/svg/arrow.svg" alt="Go to previous slide" />
+  </button>
+  <button id="goToRightBtn">
+    <img src="/svg/arrow.svg" alt="Go to next slide" />
+  </button>
+</nav>
+
+<div class="carousel" id="carousel">
+  {
+    items.map(
+      ({
+        description,
+        imgDescription,
+        imgUrl,
+        projectUrl,
+        repoUrl,
+        technologies,
+        title
+      }) => (
+        <div class="slidewrapper">
+          <div class="slide">
+            <div class="pictureContainer">
+              <ProjectPicture
+                {...{ imgDescription, imgUrl, projectUrl, repoUrl }}
+              />
+            </div>
+            <h5 class="projectTitle">{title}</h5>
+            <p class="projectPgph">{description}</p>
+
+            <ul class="techsList">
+              {technologies.map(icon => (
+                <li>
+                  <Icon size={"small"} name={icon} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )
+    )
+  }
+</div>
+
+<style>
+  .carousel {
+    --carousel-width: 100%;
+
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    width: var(--carousel-width);
+    margin: 1em auto;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav button img {
+    width: 50px;
+  }
+
+  nav :nth-child(1) img {
+    transform: rotate(180deg);
+  }
+
+  .carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    width: var(--carousel-width);
+  }
+
+  .carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slidewrapper {
+    scroll-snap-align: center;
+
+    flex: 0 0 var(--carousel-width);
+    width: var(--carousel-width);
+
+    display: flex;
+  }
+
+  .slide {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--primary-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .pictureContainer {
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .projectTitle {
+    margin: 1rem auto 0.5rem;
+  }
+
+  .techsList {
+    display: flex;
+    margin: 0.5rem auto;
+    border-radius: 5px;
+    gap: 1rem;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #999;
+    padding: 0.5rem;
+  }
+
+  .techsList li {
+    line-height: 0;
+  }
+
+  .projectPgph {
+    width: 80%;
+    margin: 0.8rem auto;
+  }
+</style>
