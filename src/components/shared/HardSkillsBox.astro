@@ -26,7 +26,9 @@ import type { IconName } from "src/types";
             id={sectionId}
           />
           {(items as IconName[]).map(tech => (
-            <Icon name={tech} size={"medium"} />
+            <div title={tech}>
+              <Icon name={tech} size={"medium"} />
+            </div>
           ))}
         </div>
       ))
