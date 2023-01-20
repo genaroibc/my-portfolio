@@ -2,11 +2,27 @@
   {
     "title": "IKODI",
     "imgUrl": "/img/ikodi.webp",
-    "technologies": ["nextjs", "mongodb", "react", "css"],
+    "technologies": ["nextjs", "mongodb", "react", "jest", "rtl", "css"],
     "imgDescription": "IKodi website preview",
     "description": "IKodi is my personal blog, where I share my knowledge writting posts about different tools, technologies and concepts related to the world of web development. With comment system included!",
     "repoUrl": "https://github.com/GenaroIBC/ikodi",
     "projectUrl": "https://ikodi.vercel.app/"
+  },
+  {
+    "title": "KINGS LEAGUE INFOJOBS",
+    "imgUrl": "/img/kings-league-infojobs.webp",
+    "technologies": [
+      "astro",
+      "js",
+      "node",
+      "vitest",
+      "tailwind",
+      "cloudflare-workers"
+    ],
+    "imgDescription": "Kings League InfoJobs website preview",
+    "description": "API and website of the Kings League InfoJobs (for didactic purpuoses). Open-source, made along with @midudev's community. We implemented web scrapping, GitHub Actions and testing. I've colaborated in the UI and writting documentation.",
+    "repoUrl": "https://github.com/midudev/kings-league-project",
+    "projectUrl": "https://kingsleague.dev/"
   },
   {
     "title": "FULL STACK TODO",
