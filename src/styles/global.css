@@ -113,6 +113,11 @@ li {
   padding: 0;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 552px) {
   :root {
     font-size: 16px;

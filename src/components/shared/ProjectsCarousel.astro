@@ -40,52 +40,56 @@ const { items } = Astro.props;
   });
 </script>
 
-<nav>
-  <button id="goToLeftBtn">
+<div class="carouselContainer">
+  <button class="carouselContainer__navBtn prevSlideBtn" id="goToLeftBtn">
     <img src="/svg/arrow.svg" alt="Go to previous slide" />
   </button>
-  <button id="goToRightBtn">
+  <button class="carouselContainer__navBtn nextSlideBtn" id="goToRightBtn">
     <img src="/svg/arrow.svg" alt="Go to next slide" />
   </button>
-</nav>
 
-<div class="carousel" id="carousel">
-  {
-    items.map(
-      ({
-        description,
-        imgDescription,
-        imgUrl,
-        projectUrl,
-        repoUrl,
-        technologies,
-        title
-      }) => (
-        <div class="slidewrapper">
-          <div class="slide">
-            <div class="pictureContainer">
-              <ProjectPicture
-                {...{ imgDescription, imgUrl, projectUrl, repoUrl }}
-              />
+  <div class="carousel" id="carousel">
+    {
+      items.map(
+        ({
+          description,
+          imgDescription,
+          imgUrl,
+          projectUrl,
+          repoUrl,
+          technologies,
+          title
+        }) => (
+          <div class="slidewrapper">
+            <div class="slide">
+              <div class="pictureContainer">
+                <ProjectPicture
+                  {...{ imgDescription, imgUrl, projectUrl, repoUrl }}
+                />
+              </div>
+              <h5 class="projectTitle">{title}</h5>
+              <p class="projectPgph">{description}</p>
+
+              <ul class="techsList">
+                {technologies.map(icon => (
+                  <li>
+                    <Icon size={"small"} name={icon} />
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h5 class="projectTitle">{title}</h5>
-            <p class="projectPgph">{description}</p>
-
-            <ul class="techsList">
-              {technologies.map(icon => (
-                <li>
-                  <Icon size={"small"} name={icon} />
-                </li>
-              ))}
-            </ul>
           </div>
-        </div>
+        )
       )
-    )
-  }
+    }
+  </div>
 </div>
 
 <style>
+  .carouselContainer {
+    position: relative;
+  }
+
   .carousel {
     --carousel-width: 100%;
 
@@ -97,16 +101,39 @@ const { items } = Astro.props;
     margin: 1em auto;
   }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
+  .carouselContainer__navBtn {
+    padding: 1.5rem;
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+
+    background-color: unset;
+
+    border-radius: 50%;
+    transition: clip-path 0.3s ease-out, background-color 0.3s ease-out;
+    clip-path: circle(25% at 50% 50%);
+
+    align-self: center;
+  }
+  .carouselContainer__navBtn:hover {
+    background-color: var(--terciary-color);
+    clip-path: circle(40% at 50% 50%);
+  }
+  .prevSlideBtn {
+    left: 0;
   }
 
-  nav button img {
-    width: 50px;
+  .nextSlideBtn {
+    right: 0;
   }
 
-  nav :nth-child(1) img {
+  .carouselContainer__navBtn img {
+    max-width: 60px;
+    width: 3rem;
+  }
+
+  .prevSlideBtn img {
+    left: 0;
     transform: rotate(180deg);
   }
 
