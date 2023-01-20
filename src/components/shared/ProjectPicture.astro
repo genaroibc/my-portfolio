@@ -39,7 +39,7 @@ const { imgDescription, imgUrl, projectUrl, repoUrl } = Astro.props;
   }
 
   .imgContainer:hover .imgContainer__icons {
-    transform: translateY(0%);
+    opacity: 1;
   }
 
   .imgContainer__img {
@@ -56,15 +56,15 @@ const { imgDescription, imgUrl, projectUrl, repoUrl } = Astro.props;
     top: 0;
     bottom: 0;
 
-    transform: translateY(100%);
-
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10%;
 
-    transition: transform 1s ease;
+    transition: opacity 0.3s ease-out;
+
     background-color: #0007;
+    opacity: 0;
   }
 
   .imgContainer__icons__link__icon {
