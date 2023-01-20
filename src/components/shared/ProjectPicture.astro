@@ -11,16 +11,16 @@ const { imgDescription, imgUrl, projectUrl, repoUrl } = Astro.props;
 
 <picture class="imgContainer">
   <div class="imgContainer__icons">
-    <a href={repoUrl}>
+    <a class="imgContainer__icons__link" href={repoUrl} target="_blank">
       <img
-        class="imgContainer__icons__icon"
+        class="imgContainer__icons__link__icon"
         src="/svg/code.svg"
         alt="code icon"
       />
     </a>
-    <a href={projectUrl}>
+    <a class="imgContainer__icons__link" href={projectUrl} target="_blank">
       <img
-        class="imgContainer__icons__icon"
+        class="imgContainer__icons__link__icon"
         src="/svg/newtab.svg"
         alt="new tab icon"
       /></a
@@ -67,7 +67,19 @@ const { imgDescription, imgUrl, projectUrl, repoUrl } = Astro.props;
     background-color: #0007;
   }
 
-  .imgContainer__icons__icon {
-    width: 25%;
+  .imgContainer__icons__link__icon {
+    width: 100%;
+    display: block;
+  }
+  .imgContainer__icons__link {
+    width: 15%;
+    aspect-ratio: 1/1;
+    padding: 2%;
+
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  .imgContainer__icons__link:hover {
+    background-color: var(--terciary-color);
   }
 </style>
