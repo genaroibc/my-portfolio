@@ -25,13 +25,13 @@
     "projectUrl": "https://kingsleague.dev/"
   },
   {
-    "title": "FULL STACK TODO",
-    "imgUrl": "/img/fullstack-todo.webp",
-    "technologies": ["nextjs", "react", "css", "mongodb"],
-    "imgDescription": "ToDo website preview",
-    "description": "The typical To-Do application, but integrating both client and server sides, with users authentication and data persistence with MongoDB.",
-    "repoUrl": "https://github.com/GenaroIBC/fullstack-todo-app",
-    "projectUrl": "https://fullstack-todo-app-ten.vercel.app/tasks"
+    "title": "QUICK PAPPER",
+    "imgUrl": "/img/quick-papper.webp",
+    "technologies": ["nextjs", "react", "css"],
+    "imgDescription": "Quick Papper website preview",
+    "description": "An AI-powered application to generate blog drafts from just a title. You can summarize, extend or regenerate each slice of the blog, and then export it in HTML, Markdown or plain text.",
+    "repoUrl": "https://github.com/GenaroIBC/quick-papper",
+    "projectUrl": "https://quick-papper.vercel.app/"
   },
   {
     "title": "MINECRAFT CLONE",
@@ -41,6 +41,15 @@
     "description": "A fully functional Minecraft clone, based on the freeCodeCamp tutorial, using Three.js (a 2D/3D JavaScript library), React and TypeScript.",
     "repoUrl": "https://github.com/GenaroIBC/minecraft-clone",
     "projectUrl": "https://minecraft-clone-hwmx.vercel.app/"
+  },
+  {
+    "title": "FULL STACK TODO",
+    "imgUrl": "/img/fullstack-todo.webp",
+    "technologies": ["nextjs", "react", "css", "mongodb"],
+    "imgDescription": "ToDo website preview",
+    "description": "The typical To-Do application, but integrating both client and server sides, with users authentication and data persistence with MongoDB.",
+    "repoUrl": "https://github.com/GenaroIBC/fullstack-todo-app",
+    "projectUrl": "https://fullstack-todo-app-ten.vercel.app/tasks"
   },
   {
     "title": "TIC TAC TOE",
