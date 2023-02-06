@@ -110,14 +110,13 @@ const { items } = Astro.props;
     background-color: unset;
 
     border-radius: 50%;
-    transition: clip-path 0.3s ease-out, background-color 0.3s ease-out;
-    clip-path: circle(25% at 50% 50%);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 
     align-self: center;
   }
   .carouselContainer__navBtn:hover {
-    background-color: var(--terciary-color);
-    clip-path: circle(40% at 50% 50%);
+    opacity: 1;
   }
   .prevSlideBtn {
     left: 0;
