@@ -8,10 +8,8 @@ import { SOFT_SKILLS_LIST } from "public/maps/skillsList.json";
   {
     SOFT_SKILLS_LIST.map(({ content, title }) => (
       <article class="softSkillsItem">
-        <h5>{title}</h5>
-        <div class="pgphContainer">
-          <p>{content}</p>
-        </div>
+        <h5 class="softSkillsItem__title">{title}</h5>
+        <p>{content}</p>
       </article>
     ))
   }
@@ -19,30 +17,60 @@ import { SOFT_SKILLS_LIST } from "public/maps/skillsList.json";
 
 <style>
   .softSkillsCont {
-    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .softSkillsItem {
-    padding: 1rem;
-    overflow: hidden;
-    text-align: center;
-  }
-
-  .pgphContainer p {
-    overflow: hidden;
-    padding: 0.7rem;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
 
     border-radius: 5px;
+    padding: 1rem;
 
-    transform: translateY(200%);
-
-    transition: transform 0.4s, background-color 0.7s ease;
+    text-align: left;
+    background-color: var(--primary-color);
   }
 
-  .softSkillsItem:hover .pgphContainer p {
-    transform: translateY(0%);
+  .softSkillsItem__title {
+    font-weight: bold;
+    width: fit-content;
+    padding: 1rem;
+  }
 
-    background-color: var(--terciary-color);
+  .softSkillsItem:nth-of-type(even) {
+    text-align: right;
+    flex-direction: row-reverse;
+  }
+
+  .softSkillsItem:nth-of-type(odd) .softSkillsItem__title {
+    text-align: right;
+    border-right: 1px solid #fff;
+  }
+
+  .softSkillsItem:nth-of-type(even) .softSkillsItem__title {
+    text-align: left;
+    border-left: 1px solid #fff;
+  }
+
+  @media screen and (max-width: 552px) {
+    .softSkillsItem {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .softSkillsItem:nth-of-type(even) {
+      flex-direction: column;
+    }
+
+    .softSkillsItem:nth-of-type(even) * {
+      text-align: left;
+    }
   }
 </style>
