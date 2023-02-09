@@ -2,7 +2,7 @@
   {
     "title": "IKODI",
     "imgUrl": "/img/ikodi.webp",
-    "technologies": ["nextjs", "mongodb", "react", "jest", "rtl", "css"],
+    "technologies": ["nextjs", "mongodb", "react", "ts", "jest", "rtl", "css"],
     "imgDescription": "IKodi website preview",
     "description": "IKodi is my personal blog, where I share my knowledge writting posts about different tools, technologies and concepts related to the world of web development. With comment system included!",
     "repoUrl": "https://github.com/GenaroIBC/ikodi",
@@ -27,7 +27,7 @@
   {
     "title": "QUICK PAPPER",
     "imgUrl": "/img/quick-papper.webp",
-    "technologies": ["nextjs", "react", "css"],
+    "technologies": ["nextjs", "react", "ts", "css", "vitest", "rtl"],
     "imgDescription": "Quick Papper website preview",
     "description": "An AI-powered application to generate blog drafts from just a title. You can summarize, extend or regenerate each slice of the blog, and then export it in HTML, Markdown or plain text.",
     "repoUrl": "https://github.com/GenaroIBC/quick-papper",
@@ -45,7 +45,7 @@
   {
     "title": "FULL STACK TODO",
     "imgUrl": "/img/fullstack-todo.webp",
-    "technologies": ["nextjs", "react", "css", "mongodb"],
+    "technologies": ["nextjs", "react", "js", "css", "mongodb"],
     "imgDescription": "ToDo website preview",
     "description": "The typical To-Do application, but integrating both client and server sides, with users authentication and data persistence with MongoDB.",
     "repoUrl": "https://github.com/GenaroIBC/fullstack-todo-app",
@@ -72,7 +72,7 @@
   {
     "title": "CRYPTO ASSETS",
     "imgUrl": "/img/crypto-assets.webp",
-    "technologies": ["react", "nextjs", "css"],
+    "technologies": ["react", "nextjs", "js", "css"],
     "imgDescription": "Crypto Assets website preview",
     "description": "A simple dashboard to view your crypto address's transactions, with a minimalist design based on Material Design style guidelines.",
     "repoUrl": "https://github.com/CollaborativeTeam/challenge/tree/develop-genaro",
