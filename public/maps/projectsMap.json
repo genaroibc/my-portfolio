@@ -34,6 +34,15 @@
     "projectUrl": "https://quick-papper.vercel.app/"
   },
   {
+    "title": "ANIMATED WEATHER",
+    "imgUrl": "/img/animated-weather.webp",
+    "technologies": ["nextjs", "react", "ts", "css"],
+    "imgDescription": "Animated Weather website preview",
+    "description": "Create a video of the weather status anywhere in the world. Customize music, colors, and then download it to share with others.",
+    "repoUrl": "https://github.com/GenaroIBC/animated-weather",
+    "projectUrl": "https://animated-weather.vercel.app/"
+  },
+  {
     "title": "MINECRAFT CLONE",
     "imgUrl": "/img/mineclone.webp",
     "technologies": ["ts", "react", "css"],
