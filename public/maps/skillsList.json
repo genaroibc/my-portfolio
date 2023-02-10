@@ -41,20 +41,24 @@
           "js",
           "ts",
           "react",
+          "mongodb",
           "node",
           "git",
           "nextjs",
           "bootstrap",
-          "mongodb"
+          "tailwind",
+          "astro",
+          "rtl",
+          "jest"
         ]
       },
       {
         "sectionId": "learning",
-        "items": ["rtl", "jest", "astro"]
+        "items": ["rust"]
       },
       {
         "sectionId": "interested",
-        "items": ["python", "rust", "aws", "blockchain"]
+        "items": ["python", "aws", "blockchain"]
       }
     ]
   }
