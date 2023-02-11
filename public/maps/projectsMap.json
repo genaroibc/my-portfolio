@@ -1,7 +1,7 @@
 [
   {
     "title": "IKODI",
-    "imgUrl": "/img/ikodi.webp",
+    "imgUrl": "/img/projects/ikodi.webp",
     "technologies": ["nextjs", "mongodb", "react", "ts", "jest", "rtl", "css"],
     "imgDescription": "IKodi website preview",
     "description": "IKodi is my personal blog, where I share my knowledge writting posts about different tools, technologies and concepts related to the world of web development. With comment system included!",
@@ -10,7 +10,7 @@
   },
   {
     "title": "KINGS LEAGUE INFOJOBS",
-    "imgUrl": "/img/kings-league-infojobs.webp",
+    "imgUrl": "/img/projects/kings-league-infojobs.webp",
     "technologies": [
       "astro",
       "js",
@@ -26,7 +26,7 @@
   },
   {
     "title": "QUICK PAPPER",
-    "imgUrl": "/img/quick-papper.webp",
+    "imgUrl": "/img/projects/quick-papper.webp",
     "technologies": ["nextjs", "react", "ts", "css", "vitest", "rtl"],
     "imgDescription": "Quick Papper website preview",
     "description": "An AI-powered application to generate blog drafts from just a title. You can summarize, extend or regenerate each slice of the blog, and then export it in HTML, Markdown or plain text.",
@@ -35,7 +35,7 @@
   },
   {
     "title": "ANIMATED WEATHER",
-    "imgUrl": "/img/animated-weather.webp",
+    "imgUrl": "/img/projects/animated-weather.webp",
     "technologies": ["nextjs", "react", "ts", "css"],
     "imgDescription": "Animated Weather website preview",
     "description": "Create a video of the weather status anywhere in the world. Customize music, colors, and then download it to share with others.",
@@ -44,7 +44,7 @@
   },
   {
     "title": "MINECRAFT CLONE",
-    "imgUrl": "/img/mineclone.webp",
+    "imgUrl": "/img/projects/mineclone.webp",
     "technologies": ["ts", "react", "css"],
     "imgDescription": "Minecraft Clone website preview",
     "description": "A fully functional Minecraft clone, based on the freeCodeCamp tutorial, using Three.js (a 2D/3D JavaScript library), React and TypeScript.",
@@ -53,7 +53,7 @@
   },
   {
     "title": "FULL STACK TODO",
-    "imgUrl": "/img/fullstack-todo.webp",
+    "imgUrl": "/img/projects/fullstack-todo.webp",
     "technologies": ["nextjs", "react", "js", "css", "mongodb"],
     "imgDescription": "ToDo website preview",
     "description": "The typical To-Do application, but integrating both client and server sides, with users authentication and data persistence with MongoDB.",
@@ -62,7 +62,7 @@
   },
   {
     "title": "TIC TAC TOE",
-    "imgUrl": "/img/tictactoe.webp",
+    "imgUrl": "/img/projects/tictactoe.webp",
     "technologies": ["js", "css", "html"],
     "imgDescription": "Tic Tac Toe website preview",
     "description": "In this version of the well-known Tic-Tac-Toe, you can play versus the machine, store your points locally to play later, change players colors and some other funny features.",
@@ -71,7 +71,7 @@
   },
   {
     "title": "CONNECT FOUR",
-    "imgUrl": "/img/connect-four.webp",
+    "imgUrl": "/img/projects/connect-four.webp",
     "technologies": ["react", "ts", "css"],
     "imgDescription": "Connect Four website preview",
     "description": "My version of the \"Connect Four\" game, implementing OOP with TypeScript and separating logic from view.",
@@ -80,7 +80,7 @@
   },
   {
     "title": "CRYPTO ASSETS",
-    "imgUrl": "/img/crypto-assets.webp",
+    "imgUrl": "/img/projects/crypto-assets.webp",
     "technologies": ["react", "nextjs", "js", "css"],
     "imgDescription": "Crypto Assets website preview",
     "description": "A simple dashboard to view your crypto address's transactions, with a minimalist design based on Material Design style guidelines.",
