@@ -4,7 +4,7 @@
     "imgUrl": "/img/projects/ikodi.webp",
     "technologies": ["nextjs", "mongodb", "react", "ts", "jest", "rtl", "css"],
     "imgDescription": "IKodi website preview",
-    "description": "IKodi is my personal blog, where I share my knowledge writting posts about different tools, technologies and concepts related to the world of web development. With comment system included!",
+    "description": "IKodi is my personal blog, where I share my knowledge writing posts about different tools, technologies and concepts related to the world of web development. With comment system included!",
     "repoUrl": "https://github.com/GenaroIBC/ikodi",
     "projectUrl": "https://ikodi.vercel.app/"
   },
@@ -20,9 +20,18 @@
       "cloudflare-workers"
     ],
     "imgDescription": "Kings League InfoJobs website preview",
-    "description": "API and website of the Kings League InfoJobs (for didactic purpuoses). Open-source, made along with @midudev's community. We implemented web scrapping, GitHub Actions and testing. I've colaborated in the UI and writting documentation.",
+    "description": "API and website of the Kings League InfoJobs (for didactic purpuoses). Open-source, made along with @midudev's community. We implemented web scrapping, GitHub Actions and testing. I've colaborated in the UI and writing documentation.",
     "repoUrl": "https://github.com/midudev/kings-league-project",
     "projectUrl": "https://kingsleague.dev/"
+  },
+  {
+    "title": "PAULA'S GALLERY",
+    "imgUrl": "/img/projects/paula-gallery.webp",
+    "technologies": ["astro", "ts", "css"],
+    "imgDescription": "Paula's gallery website preview",
+    "description": "Paula Bonavita is an artist, and here she shares her work, both writings and paintings.",
+    "repoUrl": "https://github.com/GenaroIBC/pbonavita-gallery",
+    "projectUrl": "https://pbonavita-gallery.vercel.app/"
   },
   {
     "title": "QUICK PAPPER",
