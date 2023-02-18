@@ -1,0 +1,62 @@
+---
+export type ExperienceItem = {
+  role: string;
+  company: {
+    name: string;
+    industries: string[];
+  };
+  since: string;
+  to: string;
+  responsibilities: string[];
+  accomplishments: string[];
+};
+
+export interface Props extends ExperienceItem {}
+
+const { company, role, since, to, accomplishments, responsibilities } =
+  Astro.props;
+---
+
+<article>
+  <h4 class="role">{role} at <span>{company.name}</span></h4>
+  <p>
+    <time>{since}</time> &ndash; <time>{to}</time> &bull; {
+      company.industries.join(", ")
+    }.
+  </p>
+
+  <h5>RESPONSIBILITIES</h5>
+  <ul>
+    {responsibilities.map(item => <li>{item}</li>)}
+  </ul>
+
+  <h5>KEY ACCOMPLISHMENTS</h5>
+  <ul>
+    {accomplishments.map(item => <li>{item}</li>)}
+  </ul>
+</article>
+
+<style>
+  /* article {
+    position: relative;
+    padding: 0.5rem;
+  }
+
+  article::before {
+    content: "";
+    width: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  } */
+
+  .role {
+    font-weight: bold;
+  }
+
+  ul li {
+    margin-left: 1rem;
+  }
+</style>
