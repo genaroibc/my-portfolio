@@ -1,0 +1,11 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+import experience from "public/maps/experience.json";
+---
+
+<section>
+  <h3 id="experience">Experience</h3>
+
+  {experience.map(item => <ExperienceItem {...item} />)}
+</section>

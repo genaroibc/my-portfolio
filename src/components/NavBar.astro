@@ -5,13 +5,11 @@ import navBarLinks from "public/maps/navbarLinks.json";
 <header id="page-header">
   <nav id="navbar">
     {
-      (navBarLinks as { href: string; title: string }[]).map(
-        ({ href, title }) => (
-          <a class="navbar-link" href={href}>
-            {title}
-          </a>
-        )
-      )
+      navBarLinks.map(({ href, title }) => (
+        <a class="navbar-link" href={href}>
+          {title}
+        </a>
+      ))
     }
   </nav>
 
