@@ -9,6 +9,15 @@
     "projectUrl": "https://ikodi.vercel.app/"
   },
   {
+    "title": "WC-NOTIFY",
+    "imgUrl": "/img/projects/wc-notify.webp",
+    "technologies": ["ts", "node", "css"],
+    "imgDescription": "wc-notify website preview",
+    "description": "wc-notify is an npm package to show simple and customizable toast notifications. It's built on top of the Web Components standard, so it is available on all frameworks. It allows you to customize the duration, theme, animation, and much more.",
+    "repoUrl": "https://github.com/GenaroIBC/wc-notify",
+    "projectUrl": "https://codesandbox.io/s/wc-notify-demo-nn687m"
+  },
+  {
     "title": "KINGS LEAGUE INFOJOBS",
     "imgUrl": "/img/projects/kings-league-infojobs.webp",
     "technologies": [
@@ -23,15 +32,6 @@
     "description": "API and website of the Kings League InfoJobs (for didactic purpuoses). Open-source, made along with @midudev's community. We implemented web scrapping, GitHub Actions and testing. I've colaborated in the UI and writing documentation.",
     "repoUrl": "https://github.com/midudev/kings-league-project",
     "projectUrl": "https://kingsleague.dev/"
-  },
-  {
-    "title": "PAULA'S GALLERY",
-    "imgUrl": "/img/projects/paula-gallery.webp",
-    "technologies": ["astro", "ts", "css"],
-    "imgDescription": "Paula's gallery website preview",
-    "description": "Paula Bonavita is an artist, and here she shares her work, both writings and paintings.",
-    "repoUrl": "https://github.com/GenaroIBC/pbonavita-gallery",
-    "projectUrl": "https://pbonavita-gallery.vercel.app/"
   },
   {
     "title": "QUICK PAPPER",
