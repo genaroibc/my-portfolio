@@ -18,25 +18,45 @@ const { company, role, since, to, accomplishments, responsibilities } =
 ---
 
 <article>
-  <h4 class="role">{role} at <span>{company.name}</span></h4>
-  <p>
-    <time>{since}</time> &ndash; <time>{to}</time> &bull; {
-      company.industries.join(", ")
-    }.
+  <p class="roleDate">
+    <time>{since}</time> &ndash; <time>{to}</time>
   </p>
 
-  <h5>RESPONSIBILITIES</h5>
-  <ul>
+  <h4 class="role">
+    {role} at <span>{company.name}</span>
+  </h4>
+
+  <div class="companyIndustry">
+    {
+      company.industries.map(el => (
+        <span class="companyIndustry__item">{el}</span>
+      ))
+    }
+  </div>
+
+  <h5 class="listTitle">Responsibilities</h5>
+  <ul class="list">
     {responsibilities.map(item => <li>{item}</li>)}
   </ul>
 
-  <h5>KEY ACCOMPLISHMENTS</h5>
-  <ul>
+  <h5 class="listTitle">Key accomplishments</h5>
+  <ul class="list">
     {accomplishments.map(item => <li>{item}</li>)}
   </ul>
 </article>
 
+<script>
+  document.createElement("button").requestFullscreen();
+</script>
 <style>
+  .role {
+    margin: 1rem 0;
+  }
+
+  .roleDate {
+    font-style: italic;
+  }
+
   /* article {
     position: relative;
     padding: 0.5rem;
@@ -56,7 +76,31 @@ const { company, role, since, to, accomplishments, responsibilities } =
     font-weight: bold;
   }
 
-  ul li {
-    margin-left: 1rem;
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  .listTitle {
+    margin: 2rem 0 1rem;
+  }
+
+  .companyIndustry {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .companyIndustry__item {
+    padding: 0.5rem 1.2rem;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+    opacity: 0.8;
   }
 </style>
