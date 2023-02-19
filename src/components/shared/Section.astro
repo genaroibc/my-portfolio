@@ -8,7 +8,7 @@ export type Props = {
 const { title, id, subtitle } = Astro.props;
 ---
 
-<section id={id}>
+<section class="pageSection" id={id}>
   <h3>{title}</h3>
   {subtitle && <h4>{subtitle}</h4>}
 

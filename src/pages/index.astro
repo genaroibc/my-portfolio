@@ -16,3 +16,32 @@ import Layout from "src/layouts/Layout.astro";
   <Skills />
   <Contact />
 </Layout>
+
+<script>
+  const $$ = (selector: string) => document.querySelectorAll(selector);
+  const navlinks = Array.from($$("header a[href^='#']"));
+  const $sections = Array.from($$("section.pageSection")).filter(
+    $section => $section.getAttribute("id") !== null
+  );
+
+  const observerHandler: IntersectionObserverCallback = entries => {
+    entries.forEach(entry => {
+      const entryId = entry.target.getAttribute("id");
+
+      console.log(entries);
+      if (entryId) {
+        navlinks
+          .find(link => link.matches(`a[href="#${entryId}"]`))
+          ?.classList.toggle("navlink-active", entry.isIntersecting);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerHandler, {
+    threshold: [0.3, 0.7]
+  });
+
+  $sections.forEach($section => {
+    observer.observe($section);
+  });
+</script>
