@@ -17,10 +17,7 @@ The animated title used in this project is highly based on [this CodePen](https:
 - [Twitter](https://twitter.com/carmenansio)
 - [YouTube](https://www.youtube.com/carmenansio)
 
-<hr />
-
-The carousel used in this project is highly based on [this CodePen](https://codepen.io/nopr/pen/DWrOBm), created by @JesperHills. Check out [his CodePen here](https://codepen.io/nopr/)
-
 ## 🚀 Stack
 
 - Astro
+- TypeScript
