@@ -101,7 +101,7 @@
     "imgUrl": "/img/projects/password-generator.webp",
     "technologies": ["html", "css", "js"],
     "imgDescription": "Password generator website preview",
-    "description": "A custom and secure password generator using vanila JS.",
+    "description": "A custom and secure password generator. The combination of numbers, symbols, and upper, lower and mixed case result in a wide variety of combinations. Made with vanila JS. ",
     "repoUrl": "https://github.com/GenaroIBC/password-generator",
     "projectUrl": "https://pass-generator-2022.netlify.app/"
   }
