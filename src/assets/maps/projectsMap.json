@@ -11,7 +11,7 @@
   {
     "title": "WC-NOTIFY",
     "imgUrl": "/img/projects/wc-notify.webp",
-    "technologies": ["ts", "node", "css"],
+    "technologies": ["ts", "js", "node", "css"],
     "imgDescription": "wc-notify website preview",
     "description": "wc-notify is an npm package to show simple and customizable toast notifications. It's built on top of the Web Components standard, so it is available on all frameworks. It allows you to customize the duration, theme, animation, and much more.",
     "repoUrl": "https://github.com/GenaroIBC/wc-notify",
