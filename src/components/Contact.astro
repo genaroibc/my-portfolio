@@ -1,11 +1,13 @@
 ---
 import contactMap from "src/assets/maps/contactMap.json";
+import Section from "./shared/Section.astro";
 ---
 
-<section>
-  <h3 id="contact">Contact Me</h3>
-  <h4>Let's build something amazing!</h4>
-
+<Section
+  subtitle="Let's build something amazing!"
+  title="Contact Me"
+  id="contact"
+>
   <article>
     <p>You can contact me at:</p>
     <ul>
@@ -20,7 +22,7 @@ import contactMap from "src/assets/maps/contactMap.json";
       }
     </ul>
   </article>
-</section>
+</Section>
 
 <style>
   article {

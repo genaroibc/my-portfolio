@@ -1,11 +1,9 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-
 import experience from "src/assets/maps/experience.json";
+import Section from "./shared/Section.astro";
 ---
 
-<section>
-  <h3 id="experience">Experience</h3>
-
+<Section title="Experience" id="experience">
   {experience.map(item => <ExperienceItem {...item} />)}
-</section>
+</Section>
