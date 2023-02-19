@@ -1,0 +1,27 @@
+---
+export type Props = {
+  title: string;
+  subtitle?: string;
+  id: string;
+};
+
+const { title, id, subtitle } = Astro.props;
+---
+
+<section id={id}>
+  <h3>{title}</h3>
+  {subtitle && <h4>{subtitle}</h4>}
+
+  <slot />
+</section>
+
+<style>
+  section {
+    margin: 20vh auto;
+    padding: 1rem;
+  }
+
+  h3 {
+    padding-top: 7rem;
+  }
+</style>
