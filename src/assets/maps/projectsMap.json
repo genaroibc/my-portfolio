@@ -81,7 +81,7 @@
   {
     "title": "CONNECT FOUR",
     "imgUrl": "/img/projects/connect-four.webp",
-    "technologies": ["react", "ts", "css"],
+    "technologies": ["react", "ts", "css", "html"],
     "imgDescription": "Connect Four website preview",
     "description": "My version of the \"Connect Four\" game, implementing OOP with TypeScript and separating logic from view.",
     "repoUrl": "https://github.com/GenaroIBC/connect-four",
@@ -95,5 +95,14 @@
     "description": "A simple dashboard to view your crypto address's transactions, with a minimalist design based on Material Design style guidelines.",
     "repoUrl": "https://github.com/CollaborativeTeam/challenge/tree/develop-genaro",
     "projectUrl": "https://challenge-cyan.vercel.app/"
+  },
+  {
+    "title": "PASSWORD GENERATOR",
+    "imgUrl": "/img/projects/password-generator.webp",
+    "technologies": ["html", "css", "js"],
+    "imgDescription": "Password generator website preview",
+    "description": "A custom and secure password generator using vanila JS.",
+    "repoUrl": "https://github.com/GenaroIBC/password-generator",
+    "projectUrl": "https://pass-generator-2022.netlify.app/"
   }
 ]
