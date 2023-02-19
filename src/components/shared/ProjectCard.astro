@@ -16,11 +16,23 @@ export type TProjectCard = {
 
 export interface Props extends TProjectCard {}
 
-const { description, imgUrl, imgDescription, title, technologies } =
-  Astro.props;
+const {
+  description,
+  imgUrl,
+  imgDescription,
+  title,
+  technologies,
+  projectUrl,
+  repoUrl
+} = Astro.props;
 ---
 
-<ProjectPicture imgDescription={imgDescription} imgUrl={imgUrl} />
+<ProjectPicture
+  projectUrl={projectUrl}
+  repoUrl={repoUrl}
+  imgDescription={imgDescription}
+  imgUrl={imgUrl}
+/>
 
 <div>
   <h5>{title}</h5>
