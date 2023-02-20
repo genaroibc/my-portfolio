@@ -134,8 +134,23 @@ li {
 }
 
 button {
+  padding: 0.8rem 1.8rem;
+
+  font-size: 1rem;
+
+  filter: brightness(85%);
+  background-color: var(--terciary-color);
+  color: #fff;
+
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+
+  transition: filter 0.2s ease;
+}
+
+button:hover {
+  filter: brightness(100%);
 }
 
 @media screen and (min-width: 552px) {
