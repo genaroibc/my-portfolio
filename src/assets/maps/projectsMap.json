@@ -1,6 +1,6 @@
 [
   {
-    "title": "IKODI",
+    "title": "IKodi",
     "imgUrl": "/img/projects/ikodi.webp",
     "technologies": ["nextjs", "mongodb", "react", "ts", "jest", "rtl", "css"],
     "imgDescription": "IKodi website preview",
@@ -9,7 +9,7 @@
     "projectUrl": "https://ikodi.vercel.app/"
   },
   {
-    "title": "WC-NOTIFY",
+    "title": "wc-notify",
     "imgUrl": "/img/projects/wc-notify.webp",
     "technologies": ["ts", "js", "node", "css"],
     "imgDescription": "wc-notify website preview",
@@ -18,7 +18,7 @@
     "projectUrl": "https://codesandbox.io/s/wc-notify-demo-nn687m"
   },
   {
-    "title": "KINGS LEAGUE INFOJOBS",
+    "title": "Kings League InfoJobs",
     "imgUrl": "/img/projects/kings-league-infojobs.webp",
     "technologies": [
       "astro",
@@ -34,16 +34,16 @@
     "projectUrl": "https://kingsleague.dev/"
   },
   {
-    "title": "QUICK PAPPER",
+    "title": "Quick Papper",
     "imgUrl": "/img/projects/quick-papper.webp",
     "technologies": ["nextjs", "react", "ts", "css", "vitest", "rtl"],
     "imgDescription": "Quick Papper website preview",
-    "description": "An AI-powered application to generate blog drafts from just a title. You can summarize, extend or regenerate each slice of the blog, and then export it in HTML, Markdown or plain text.",
+    "description": "An AI-powered application to generate blog drafts from just a title. You can summarize, extend or regenerate each slice of the blog, and then export it in HTML, Markdown or plain text. Part of midudev-cohere hackaton.",
     "repoUrl": "https://github.com/GenaroIBC/quick-papper",
     "projectUrl": "https://quick-papper.vercel.app/"
   },
   {
-    "title": "ANIMATED WEATHER",
+    "title": "Animated Weather",
     "imgUrl": "/img/projects/animated-weather.webp",
     "technologies": ["nextjs", "react", "ts", "css"],
     "imgDescription": "Animated Weather website preview",
@@ -52,7 +52,7 @@
     "projectUrl": "https://animated-weather.vercel.app/"
   },
   {
-    "title": "MINECRAFT CLONE",
+    "title": "Minecraft Clone",
     "imgUrl": "/img/projects/mineclone.webp",
     "technologies": ["ts", "react", "css"],
     "imgDescription": "Minecraft Clone website preview",
@@ -61,7 +61,7 @@
     "projectUrl": "https://minecraft-clone-hwmx.vercel.app/"
   },
   {
-    "title": "FULL STACK TODO",
+    "title": "Full-stack ToDo",
     "imgUrl": "/img/projects/fullstack-todo.webp",
     "technologies": ["nextjs", "react", "js", "css", "mongodb"],
     "imgDescription": "ToDo website preview",
@@ -70,7 +70,7 @@
     "projectUrl": "https://fullstack-todo-app-ten.vercel.app/tasks"
   },
   {
-    "title": "TIC TAC TOE",
+    "title": "tic-tac-toe",
     "imgUrl": "/img/projects/tictactoe.webp",
     "technologies": ["js", "css", "html"],
     "imgDescription": "Tic Tac Toe website preview",
@@ -79,7 +79,7 @@
     "projectUrl": "https://genaroibc.github.io/tic-tac-toe"
   },
   {
-    "title": "CONNECT FOUR",
+    "title": "Connect Four",
     "imgUrl": "/img/projects/connect-four.webp",
     "technologies": ["react", "ts", "css", "html"],
     "imgDescription": "Connect Four website preview",
@@ -88,7 +88,7 @@
     "projectUrl": "https://connect-four-mauve.vercel.app/"
   },
   {
-    "title": "CRYPTO ASSETS",
+    "title": "Crypto Assets",
     "imgUrl": "/img/projects/crypto-assets.webp",
     "technologies": ["react", "nextjs", "js", "css"],
     "imgDescription": "Crypto Assets website preview",
@@ -97,7 +97,7 @@
     "projectUrl": "https://challenge-cyan.vercel.app/"
   },
   {
-    "title": "PASSWORD GENERATOR",
+    "title": "Password Generator",
     "imgUrl": "/img/projects/password-generator.webp",
     "technologies": ["html", "css", "js"],
     "imgDescription": "Password generator website preview",
