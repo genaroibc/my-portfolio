@@ -2,7 +2,15 @@
   {
     "title": "IKodi",
     "imgUrl": "/img/projects/ikodi.webp",
-    "technologies": ["nextjs", "mongodb", "react", "ts", "jest", "rtl", "css"],
+    "technologies": [
+      "nextjs",
+      "mongodb",
+      "react",
+      "typescript",
+      "jest",
+      "testing-library",
+      "css"
+    ],
     "imgDescription": "IKodi website preview",
     "description": "IKodi is my personal blog, where I share my knowledge writing posts about different tools, technologies and concepts related to the world of web development. With comment system included!",
     "repoUrl": "https://github.com/GenaroIBC/ikodi",
@@ -11,7 +19,7 @@
   {
     "title": "wc-notify",
     "imgUrl": "/img/projects/wc-notify.webp",
-    "technologies": ["ts", "js", "node", "css"],
+    "technologies": ["typescript", "javascript", "node", "css"],
     "imgDescription": "wc-notify website preview",
     "description": "wc-notify is an npm package to show simple and customizable toast notifications. It's built on top of the Web Components standard, so it is available on all frameworks. It allows you to customize the duration, theme, animation, and much more.",
     "repoUrl": "https://github.com/GenaroIBC/wc-notify",
@@ -22,7 +30,7 @@
     "imgUrl": "/img/projects/kings-league-infojobs.webp",
     "technologies": [
       "astro",
-      "js",
+      "javascript",
       "node",
       "vitest",
       "tailwind",
@@ -36,7 +44,14 @@
   {
     "title": "Quick Papper",
     "imgUrl": "/img/projects/quick-papper.webp",
-    "technologies": ["nextjs", "react", "ts", "css", "vitest", "rtl"],
+    "technologies": [
+      "nextjs",
+      "react",
+      "typescript",
+      "css",
+      "vitest",
+      "testing-library"
+    ],
     "imgDescription": "Quick Papper website preview",
     "description": "An AI-powered application to generate blog drafts from just a title. You can summarize, extend or regenerate each slice of the blog, and then export it in HTML, Markdown or plain text. Part of midudev-cohere hackaton.",
     "repoUrl": "https://github.com/GenaroIBC/quick-papper",
@@ -45,7 +60,7 @@
   {
     "title": "Animated Weather",
     "imgUrl": "/img/projects/animated-weather.webp",
-    "technologies": ["nextjs", "react", "ts", "css"],
+    "technologies": ["nextjs", "react", "typescript", "css"],
     "imgDescription": "Animated Weather website preview",
     "description": "Create a video of the weather status anywhere in the world. Customize music, colors, and then download it to share with others.",
     "repoUrl": "https://github.com/GenaroIBC/animated-weather",
@@ -54,7 +69,7 @@
   {
     "title": "Minecraft Clone",
     "imgUrl": "/img/projects/mineclone.webp",
-    "technologies": ["ts", "react", "css"],
+    "technologies": ["typescript", "react", "css"],
     "imgDescription": "Minecraft Clone website preview",
     "description": "A fully functional Minecraft clone, based on the freeCodeCamp tutorial, using Three.js (a 2D/3D JavaScript library), React and TypeScript.",
     "repoUrl": "https://github.com/GenaroIBC/minecraft-clone",
@@ -63,7 +78,7 @@
   {
     "title": "Full-stack ToDo",
     "imgUrl": "/img/projects/fullstack-todo.webp",
-    "technologies": ["nextjs", "react", "js", "css", "mongodb"],
+    "technologies": ["nextjs", "react", "javascript", "css", "mongodb"],
     "imgDescription": "ToDo website preview",
     "description": "The typical To-Do application, but integrating both client and server sides, with users authentication and data persistence with MongoDB.",
     "repoUrl": "https://github.com/GenaroIBC/fullstack-todo-app",
@@ -72,7 +87,7 @@
   {
     "title": "tic-tac-toe",
     "imgUrl": "/img/projects/tictactoe.webp",
-    "technologies": ["js", "css", "html"],
+    "technologies": ["javascript", "css", "html"],
     "imgDescription": "Tic Tac Toe website preview",
     "description": "In this version of the well-known Tic-Tac-Toe, you can play versus the machine, store your points locally to play later, change players colors and some other funny features.",
     "repoUrl": "https://github.com/GenaroIBC/tic-tac-toe",
@@ -81,7 +96,7 @@
   {
     "title": "Connect Four",
     "imgUrl": "/img/projects/connect-four.webp",
-    "technologies": ["react", "ts", "css", "html"],
+    "technologies": ["react", "typescript", "css", "html"],
     "imgDescription": "Connect Four website preview",
     "description": "My version of the \"Connect Four\" game, implementing OOP with TypeScript and separating logic from view.",
     "repoUrl": "https://github.com/GenaroIBC/connect-four",
@@ -90,7 +105,7 @@
   {
     "title": "Crypto Assets",
     "imgUrl": "/img/projects/crypto-assets.webp",
-    "technologies": ["react", "nextjs", "js", "css"],
+    "technologies": ["react", "nextjs", "javascript", "css"],
     "imgDescription": "Crypto Assets website preview",
     "description": "A simple dashboard to view your crypto address's transactions, with a minimalist design based on Material Design style guidelines.",
     "repoUrl": "https://github.com/CollaborativeTeam/challenge/tree/develop-genaro",
@@ -99,7 +114,7 @@
   {
     "title": "Password Generator",
     "imgUrl": "/img/projects/password-generator.webp",
-    "technologies": ["html", "css", "js"],
+    "technologies": ["html", "css", "javascript"],
     "imgDescription": "Password generator website preview",
     "description": "A custom and secure password generator. The combination of numbers, symbols, and upper, lower and mixed case result in a wide variety of combinations. Made with vanila JS. ",
     "repoUrl": "https://github.com/GenaroIBC/password-generator",

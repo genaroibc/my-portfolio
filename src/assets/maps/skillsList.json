@@ -38,8 +38,8 @@
         "items": [
           "html",
           "css",
-          "js",
-          "ts",
+          "javascript",
+          "typescript",
           "react",
           "mongodb",
           "node",
@@ -48,7 +48,7 @@
           "bootstrap",
           "tailwind",
           "astro",
-          "rtl",
+          "testing-library",
           "jest"
         ]
       },

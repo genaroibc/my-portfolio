@@ -28,7 +28,6 @@ import Layout from "src/layouts/Layout.astro";
     entries.forEach(entry => {
       const entryId = entry.target.getAttribute("id");
 
-      console.log(entries);
       if (entryId) {
         navlinks
           .find(link => link.matches(`a[href="#${entryId}"]`))

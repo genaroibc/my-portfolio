@@ -1,7 +1,7 @@
 export type IconName =
   | "rust"
   | "jest"
-  | "rtl"
+  | "testing-library"
   | "astro"
   | "aws"
   | "blockchain"
@@ -10,11 +10,11 @@ export type IconName =
   | "git"
   | "github"
   | "html"
-  | "js"
+  | "javascript"
   | "mongodb"
   | "nextjs"
   | "node"
   | "react"
-  | "ts";
+  | "typescript";
 
 export type IconSize = "tiny" | "small" | "medium" | "large" | "huge";
