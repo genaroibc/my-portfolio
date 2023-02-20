@@ -3,7 +3,8 @@
     "role": "Frontend Developer",
     "company": {
       "name": "GoCode",
-      "industries": ["web services", "consultanty"]
+      "industries": ["web services", "consultanty"],
+      "location": "Buenos Aires, Argentina"
     },
     "since": "08/22",
     "to": "Present",

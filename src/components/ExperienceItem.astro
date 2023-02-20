@@ -4,6 +4,7 @@ export type ExperienceItem = {
   company: {
     name: string;
     industries: string[];
+    location: string;
   };
   since: string;
   to: string;
@@ -18,13 +19,21 @@ const { company, role, since, to, accomplishments, responsibilities } =
 ---
 
 <article>
-  <p class="roleDate">
-    <time>{since}</time> &ndash; <time>{to}</time>
-  </p>
-
   <h4 class="role">
     {role} at <span>{company.name}</span>
   </h4>
+
+  <div class="roleInfo">
+    <p class="roleInfo__item">
+      <img class="roleInfo__item__icon" src="/svg/calendar.svg" alt="" />
+      <time>{since}</time> &ndash; <time>{to}</time>
+    </p>
+
+    <p class="roleInfo__item">
+      <img class="roleInfo__item__icon" src="/svg/location.svg" alt="" />
+      <span>{company.location}</span>
+    </p>
+  </div>
 
   <div class="companyIndustry">
     {
@@ -50,8 +59,29 @@ const { company, role, since, to, accomplishments, responsibilities } =
     margin: 1rem 0;
   }
 
-  .roleDate {
-    font-style: italic;
+  .roleInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin: 1rem 0;
+  }
+
+  .roleInfo__item {
+    padding: 0.5rem 1.2rem;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+    opacity: 0.8;
+
+    font-size: 1rem;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  .roleInfo__item__icon {
+    width: 2rem;
   }
 
   /* article {
