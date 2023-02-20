@@ -12,9 +12,37 @@ import NeonTitle from "src/components/shared/NeonTitle.astro";
   <p class="paragraph">
     I create products and solve problems through clean and maintainable code.
   </p>
+
+  <a download class="downloadCvBtn" href="/Genaro-Bonavita-CV.pdf">
+    Download CV
+  </a>
 </section>
 
 <style>
+  .downloadCvBtn {
+    display: block;
+    max-width: fit-content;
+
+    margin: 2rem auto;
+    padding: 0.8rem 1.8rem;
+
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    filter: brightness(85%);
+    background-color: var(--terciary-color);
+    color: #fff;
+
+    transition: filter 0.2s ease;
+  }
+
+  .downloadCvBtn:hover {
+    text-decoration: none;
+    filter: brightness(100%);
+  }
+
   section {
     margin: 0 auto !important;
     padding: 10rem 1rem !important;
@@ -25,6 +53,7 @@ import NeonTitle from "src/components/shared/NeonTitle.astro";
 
   .paragraph {
     font-size: 1.8rem;
+    margin: 1rem auto;
   }
 
   h2 {
