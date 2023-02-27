@@ -13,21 +13,31 @@ const { imgDescription, imgUrl, projectUrl, repoUrl } = Astro.props;
   <div class="imgContainer__icons">
     <a class="imgContainer__icons__link" href={repoUrl} target="_blank">
       <img
+        width="25"
+        height="25"
         class="imgContainer__icons__link__icon"
         src="/svg/code.svg"
-        alt="code icon"
+        alt="view source code"
       />
     </a>
     <a class="imgContainer__icons__link" href={projectUrl} target="_blank">
       <img
+        width="25"
+        height="25"
         class="imgContainer__icons__link__icon"
         src="/svg/newtab.svg"
-        alt="new tab icon"
+        alt="visit project website"
       /></a
     >
   </div>
 
-  <img class="imgContainer__img" src={imgUrl} alt={imgDescription} />
+  <img
+    width="400"
+    height="400"
+    class="imgContainer__img"
+    src={imgUrl}
+    alt={imgDescription}
+  />
 </picture>
 
 <style>
@@ -49,6 +59,7 @@ const { imgDescription, imgUrl, projectUrl, repoUrl } = Astro.props;
 
     background: linear-gradient(45deg, orange 50%, cyan);
     border-radius: 5px;
+    max-width: 400px;
   }
 
   .imgContainer__icons {

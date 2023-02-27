@@ -42,10 +42,15 @@ const { items } = Astro.props;
 
 <div class="carouselContainer">
   <button class="carouselContainer__navBtn prevSlideBtn" id="goToLeftBtn">
-    <img src="/svg/arrow.svg" alt="Go to previous slide" />
+    <img
+      width="30"
+      height="30"
+      src="/svg/arrow.svg"
+      alt="Go to previous slide"
+    />
   </button>
   <button class="carouselContainer__navBtn nextSlideBtn" id="goToRightBtn">
-    <img src="/svg/arrow.svg" alt="Go to next slide" />
+    <img width="30" height="30" src="/svg/arrow.svg" alt="Go to next slide" />
   </button>
 
   <div class="carousel" id="carousel">
@@ -71,7 +76,7 @@ const { items } = Astro.props;
               <p class="projectPgph">{description}</p>
 
               <ul class="techsList">
-                {technologies.map(icon => (
+                {technologies.map((icon) => (
                   <li>
                     <Icon size={"small"} name={icon} />
                   </li>
