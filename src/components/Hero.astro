@@ -1,14 +1,16 @@
 ---
-import NeonTitle from "src/components/shared/NeonTitle.astro";
+import NeonTitle from "src/components/shared/NeonTitle.astro"
 ---
 
 <section>
   <span class="intro">hi 👋, I am</span>
-
-  <NeonTitle content="Genaro" delay={250} />
-  <NeonTitle content="Bonavita" delay={250} />
+  <h1>
+    <NeonTitle content="Genaro" delay={250} />
+    <NeonTitle content="Bonavita" delay={250} />
+  </h1>
 
   <h2>Frontend Developer</h2>
+
   <p class="paragraph">
     I create products and solve problems through clean and maintainable code.
   </p>
@@ -45,31 +47,35 @@ import NeonTitle from "src/components/shared/NeonTitle.astro";
 
   section {
     margin: 0 auto !important;
-    padding: 10rem 1rem !important;
+    padding: 10rem 0 !important;
     text-align: center;
-
-    font-size: 6rem;
   }
 
   .paragraph {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     margin: 1rem auto;
+    max-width: 50ch;
+  }
+
+  h1 {
+    font-size: 7rem;
+    margin: 1rem 0;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     opacity: 0.7;
   }
   .intro {
     display: block;
 
     opacity: 0.8;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 
-  @media screen and (min-width: 768px) {
-    section {
-      font-size: 8rem;
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 5rem;
     }
   }
 </style>
