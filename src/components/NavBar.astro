@@ -25,7 +25,7 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
     document.getElementById("navbar")?.classList.toggle("menu-visible");
   };
 
-  document.addEventListener("click", e => {
+  document.addEventListener("click", (e) => {
     const target = e.target as HTMLElement;
 
     if (
@@ -44,7 +44,7 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
     font-size: 1.2rem;
   }
 
-  .navlink-active {
+  .navbar-link.navlink-active {
     text-shadow: 1px 1px 5px var(--terciary-color);
     color: #fff;
   }
@@ -89,6 +89,15 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
 
   .navbar-link {
     padding: 0.8rem;
+    text-decoration: none;
+    color: #ccc;
+
+    transition: color 0.2s ease;
+  }
+
+  .navbar-link:hover {
+    color: #fff;
+    text-decoration: underline;
   }
 
   #navbar.menu-visible {
