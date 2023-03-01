@@ -21,9 +21,20 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
 </header>
 
 <script>
-  const toggleHamburgerMenu = () => {
+  const $pageHeader = document.getElementById("page-header");
+  let lastScrollY = window.scrollY;
+
+  function toggleHeaderOnScroll() {
+    const currentScrollY = window.scrollY;
+    const isScrollDown = lastScrollY < currentScrollY;
+
+    $pageHeader?.classList.toggle("page-header-hidden", isScrollDown);
+    lastScrollY = currentScrollY;
+  }
+
+  function toggleHamburgerMenu() {
     document.getElementById("navbar")?.classList.toggle("menu-visible");
-  };
+  }
 
   document.addEventListener("click", (e) => {
     const target = e.target as HTMLElement;
@@ -36,6 +47,10 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
     ) {
       toggleHamburgerMenu();
     }
+  });
+
+  window.addEventListener("scroll", () => {
+    toggleHeaderOnScroll();
   });
 </script>
 
@@ -63,8 +78,12 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
     background-color: var(--secondary-color);
 
     box-shadow: 0px 5px 10px 5px #0006;
+    transition: top 0.3s ease-in;
   }
 
+  #page-header.page-header-hidden {
+    top: -150px;
+  }
   /* *** NAVBAR *** */
   #navbar {
     position: absolute;
