@@ -1,25 +1,32 @@
 ---
-import contactMap from "src/assets/maps/contactMap.json";
 import Section from "src/components/shared/Section.astro";
+import GitHubLogo from "../animated-icons/GitHubLogo.astro";
+import LinkedinLogo from "../animated-icons/LinkedinLogo.astro";
 ---
 
-<Section
-  subtitle="Let's build something amazing!"
-  title="Contact Me"
-  id="contact"
->
+<Section title="Contact Me" id="contact">
   <article>
-    <p>You can contact me at:</p>
-    <ul>
-      {
-        contactMap.map(({ href, imageSrc, title }) => (
-          <li>
-            <a href={href} target="_blank">
-              <img width="50" height="50" src={imageSrc} alt={title} />
-            </a>
-          </li>
-        ))
-      }
+    <p class="ctaParagraph">Let's build something amazing!</p>
+    <ul class="contactNavbar">
+      <li class="contactNavbar__contactItem">
+        <a
+          title="Visit my work at GitHub"
+          href="https://linkedin.com/in/genaro-bonavita"
+        >
+          <GitHubLogo />
+          My work
+        </a>
+      </li>
+
+      <li class="contactNavbar__contactItem">
+        <a
+          title="Connect with me at LinkedIn"
+          href="https://github.com/GenaroIBC"
+        >
+          <LinkedinLogo />
+          Connect
+        </a>
+      </li>
     </ul>
   </article>
 </Section>
@@ -27,17 +34,17 @@ import Section from "src/components/shared/Section.astro";
 <style>
   article {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
 
-    background-color: var(--complement-color);
-    color: #000;
-    border-radius: 5px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
 
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
+
   ul {
     display: flex;
     justify-content: center;
@@ -46,30 +53,41 @@ import Section from "src/components/shared/Section.astro";
     gap: 1rem;
   }
 
-  p {
-    margin: 0px;
+  .ctaParagraph {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    margin: 0;
   }
 
-  a {
-    max-width: 25px;
+  .contactNavbar {
     display: flex;
-
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
 
-    border-radius: 50%;
+    margin: 0 auto;
   }
 
-  img {
-    width: 100%;
+  .contactNavbar__contactItem {
+    width: 5rem;
+    width: 5rem;
+
+    aspect-ratio: 1/1;
+    line-height: 1;
+    text-align: center;
+
+    transition: filter 0.15s ease;
+    filter: brightness(0.8);
   }
 
-  @media screen and (min-width: 768px) {
-    article {
-      flex-direction: row;
-    }
+  .contactNavbar__contactItem a {
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2;
+  }
 
-    a {
-      max-width: 50px;
-    }
+  .contactNavbar__contactItem:hover {
+    filter: brightness(100%);
   }
 </style>
