@@ -31,8 +31,8 @@
 }
 
 :root {
-  --primary-color: #171717;
-  --secondary-color: #282828;
+  --primary-color: #090c0d;
+  --secondary-color: #222;
   --terciary-color: #da0037;
   --complement-color: #ededed;
 
@@ -60,7 +60,7 @@ body {
   overflow-wrap: break-word;
   line-height: 1.5;
 
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: var(--text-color);
 }
 
