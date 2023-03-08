@@ -21,7 +21,7 @@
     "imgUrl": "/img/projects/clippitt.webp",
     "technologies": ["nextjs", "react", "typescript", "cloudinary", "tailwind"],
     "imgDescription": "Clippitt website preview",
-    "description": "2nd place winner in the CloudCreate Hackathon 2023. A tool to create vertical videos for social networks like YouTube Shorts, TikTok, and Instagram reels, using a Twitch clip. Powered by Cloudinary.",
+    "description": "2nd place winner in the CloudCreate Hackathon 2023. Simple: Upload a Twitch clip, select the desired areas, choose a layout, and automatically get a vertical video for YouTube Shorts, TikTok, and Instagram reels.",
     "repoUrl": "https://github.com/genaroibc/clippitt",
     "projectUrl": "https://clippitt.vercel.app/"
   },
@@ -51,6 +51,15 @@
     "projectUrl": "https://kingsleague.dev/"
   },
   {
+    "title": "Animated Weather",
+    "imgUrl": "/img/projects/animated-weather.webp",
+    "technologies": ["nextjs", "react", "typescript", "css"],
+    "imgDescription": "Animated Weather website preview",
+    "description": "Create a video of the weather status anywhere in the world. Customize music, colors, and then download it to share with others.",
+    "repoUrl": "https://github.com/GenaroIBC/animated-weather",
+    "projectUrl": "https://animated-weather.vercel.app/"
+  },
+  {
     "title": "Quick Papper",
     "imgUrl": "/img/projects/quick-papper.webp",
     "technologies": [
@@ -67,15 +76,6 @@
     "projectUrl": "https://quick-papper.vercel.app/"
   },
   {
-    "title": "Animated Weather",
-    "imgUrl": "/img/projects/animated-weather.webp",
-    "technologies": ["nextjs", "react", "typescript", "css"],
-    "imgDescription": "Animated Weather website preview",
-    "description": "Create a video of the weather status anywhere in the world. Customize music, colors, and then download it to share with others.",
-    "repoUrl": "https://github.com/GenaroIBC/animated-weather",
-    "projectUrl": "https://animated-weather.vercel.app/"
-  },
-  {
     "title": "Minecraft Clone",
     "imgUrl": "/img/projects/mineclone.webp",
     "technologies": ["typescript", "react", "css"],
@@ -84,6 +84,16 @@
     "repoUrl": "https://github.com/GenaroIBC/minecraft-clone",
     "projectUrl": "https://minecraft-clone-hwmx.vercel.app/"
   },
+  {
+    "title": "Shape Snap",
+    "imgUrl": "/img/projects/shape-snap.webp",
+    "technologies": ["react", "typescript", "tailwind", "cloudinary"],
+    "imgDescription": "Shape Snap website preview",
+    "description": "A generator of banners for social networks like Twitter, LinkedIn and Youtube. You upload only one image, and Shape Snap automatically crops it to the needed size for each platform, so you can download and use them instantly.",
+    "repoUrl": "https://github.com/GenaroIBC/shape-snap",
+    "projectUrl": "https://shape-snap.vercel.app/"
+  },
+
   {
     "title": "Full-stack ToDo",
     "imgUrl": "/img/projects/fullstack-todo.webp",
