@@ -2,8 +2,10 @@
 import ExperienceItem from "src/components/ExperienceItem.astro";
 import experience from "src/assets/maps/experience.json";
 import Section from "src/components/shared/Section.astro";
+import HackathonWinner from "../HackathonWinner.astro";
 ---
 
 <Section title="Experience" id="experience">
-  {experience.map(item => <ExperienceItem {...item} />)}
+  <HackathonWinner />
+  {experience.map((item) => <ExperienceItem {...item} />)}
 </Section>
