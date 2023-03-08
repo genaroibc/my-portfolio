@@ -37,7 +37,7 @@
       "cloudflare-workers"
     ],
     "imgDescription": "Kings League InfoJobs website preview",
-    "description": "API and website of the Kings League InfoJobs (for didactic purpuoses). Open-source, made along with @midudev's community. We implemented web scrapping, GitHub Actions and testing. I've colaborated in the UI and writing documentation.",
+    "description": "API and website of the Kings League InfoJobs (for didactic purposes). Open-source, made along with @midudev's community. We implemented web scrapping, GitHub Actions and testing. I've collaborated in the UI and writing documentation.",
     "repoUrl": "https://github.com/midudev/kings-league-project",
     "projectUrl": "https://kingsleague.dev/"
   },
@@ -53,7 +53,7 @@
       "testing-library"
     ],
     "imgDescription": "Quick Papper website preview",
-    "description": "An AI-powered application to generate blog drafts from just a title. You can summarize, extend or regenerate each slice of the blog, and then export it in HTML, Markdown or plain text. Part of midudev-cohere hackaton.",
+    "description": "An AI-powered application to generate blog drafts from just a title. You can summarize, extend or regenerate each slice of the blog, and then export it in HTML, Markdown or plain text. Part of midudev-cohere hackathon.",
     "repoUrl": "https://github.com/GenaroIBC/quick-papper",
     "projectUrl": "https://quick-papper.vercel.app/"
   },
@@ -116,7 +116,7 @@
     "imgUrl": "/img/projects/password-generator.webp",
     "technologies": ["html", "css", "javascript"],
     "imgDescription": "Password generator website preview",
-    "description": "A custom and secure password generator. The combination of numbers, symbols, and upper, lower and mixed case result in a wide variety of combinations. Made with vanila JS. ",
+    "description": "A custom and secure password generator. The combination of numbers, symbols, and upper, lower and mixed case result in a wide variety of combinations. Made with vanilla JS.",
     "repoUrl": "https://github.com/GenaroIBC/password-generator",
     "projectUrl": "https://pass-generator-2022.netlify.app/"
   }
