@@ -11,12 +11,21 @@ const { title, description, image = "/public/favicon.svg" } = Astro.props;
 ---
 
 <head>
+  <!-- for Google -->
+  <meta name="author" content="Genaro Bonavita" />
+  <meta name="copyright" content="Genaro Bonavita" />
+  <meta name="application-name" content="Genaro Bonavita" />
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content={Astro.url} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={new URL(image, Astro.url)} />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Genaro Bonavita" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="315" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
@@ -45,4 +54,8 @@ const { title, description, image = "/public/favicon.svg" } = Astro.props;
   <title>{title}</title>
   <meta name="title" content={title} />
   <meta name="description" content={description} />
+  <meta
+    name="keywords"
+    content="Genaro, Ismael, Bonavita, Chauque, Genaro Bonavita, Genaro Chauque, Genaro Ismale, Frontend Developer, GenaroIBC, Web development, portfolio, web portolio"
+  />
 </head>
