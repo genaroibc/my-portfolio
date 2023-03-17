@@ -64,21 +64,22 @@ import OvalShadow from "./shared/OvalShadow.astro";
   }
 
   .downloadCvBtn {
-    padding: 0.8rem 2rem;
+    padding: 0.6rem 1.8rem;
     border-radius: 2rem;
 
+    font-weight: 600;
     background-color: transparent;
-    border: 5px solid var(--complement-color);
     text-decoration: none;
 
     transition: 0.2s ease-out;
-    transition-property: background-color, transform, border-color;
+    transition-property: transform;
+    background: var(--complement-color);
+    color: #000;
+
+    border-color: transparent;
   }
 
   .downloadCvBtn:is(:hover, :focus) {
-    background: var(--complement-color);
-
-    border-color: transparent;
     transform: scale(1.1);
   }
 
