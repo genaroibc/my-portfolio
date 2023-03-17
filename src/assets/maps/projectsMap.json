@@ -35,8 +35,8 @@
     "projectUrl": "https://codesandbox.io/s/wc-notify-demo-nn687m"
   },
   {
-    "title": "Kings League InfoJobs",
-    "imgUrl": "/img/projects/kings-league-infojobs.webp",
+    "title": "Kings League Project",
+    "imgUrl": "/img/projects/kings-league-project.webp",
     "technologies": [
       "astro",
       "javascript",
@@ -45,8 +45,8 @@
       "tailwind",
       "cloudflare-workers"
     ],
-    "imgDescription": "Kings League InfoJobs website preview",
-    "description": "API and website of the Kings League InfoJobs (for didactic purposes). Open-source, made along with @midudev's community. We implemented web scrapping, GitHub Actions and testing. I've collaborated in the UI and writing documentation.",
+    "imgDescription": "Kings League Project website preview",
+    "description": "API and website of the Kings League made for educational purposes. Open-source. Web scrapping, GitHub Actions and testing. I've collaborated in the UI and writing documentation.",
     "repoUrl": "https://github.com/midudev/kings-league-project",
     "projectUrl": "https://kingsleague.dev/"
   },
@@ -89,7 +89,7 @@
     "imgUrl": "/img/projects/shape-snap.webp",
     "technologies": ["react", "typescript", "tailwind", "cloudinary"],
     "imgDescription": "Shape Snap website preview",
-    "description": "A generator of banners for social networks like Twitter, LinkedIn and Youtube. You upload only one image, and Shape Snap automatically crops it to the needed size for each platform, so you can download and use them instantly.",
+    "description": "A generator of banners for social networks like Twitter, LinkedIn and Youtube. You upload only one image, and Shape Snap automatically crops it to the needed size for each platform.",
     "repoUrl": "https://github.com/GenaroIBC/shape-snap",
     "projectUrl": "https://shape-snap.vercel.app/"
   },
