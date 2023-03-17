@@ -9,7 +9,7 @@ const { title, id, subtitle } = Astro.props;
 ---
 
 <section class="pageSection" id={id}>
-  <h3>{title}</h3>
+  <h3 class="sectionTitle">{title}</h3>
   {subtitle && <h4>{subtitle}</h4>}
 
   <slot />
@@ -21,7 +21,15 @@ const { title, id, subtitle } = Astro.props;
     padding: 1rem;
   }
 
-  h3 {
+  .sectionTitle {
     padding-top: 7rem;
+    color: var(--complement-color);
+    font-size: 2rem;
+  }
+
+  .sectionTitle::before {
+    counter-increment: sectionTitle;
+
+    content: counter(sectionTitle) ". ";
   }
 </style>
