@@ -42,11 +42,6 @@ import type { IconName } from "src/types";
     display: none;
   }
 
-  label:is(:focus, :hover) {
-    transition: background-color 0.3s ease;
-    background-color: #bbb;
-  }
-
   .skillsBox {
     position: absolute;
 
@@ -62,7 +57,7 @@ import type { IconName } from "src/types";
 
     padding: 1rem;
 
-    background-color: #999;
+    background-color: #777;
 
     overflow: auto;
     top: 0;
@@ -87,7 +82,7 @@ import type { IconName } from "src/types";
     display: flex;
     border-radius: 5px;
 
-    background-color: var(--complement-color);
+    background-color: #999;
     padding: 0.3rem;
 
     margin-bottom: 4rem;
@@ -113,9 +108,9 @@ import type { IconName } from "src/types";
     width: 40%;
     padding: 1rem;
 
-    border-right: 3px solid var(--complement-color);
+    border-right: 3px solid #999;
     border-radius: 5px 0 0 5px;
-    background-color: #999;
+    background-color: #777;
   }
 
   .navbar__option {
@@ -123,16 +118,13 @@ import type { IconName } from "src/types";
     color: #000;
 
     padding: 1rem;
-    background-color: var(--complement-color);
+    background-color: #999;
 
+    transition: box-shadow 0.2s ease-out;
     border-radius: 5px;
     cursor: pointer;
-
-    transition: box-shadow 0.1s !important;
-    box-shadow: 0 5px 0 var(--complement-color);
   }
-
-  .navbar__option:active {
-    box-shadow: 0 1px 0 var(--complement-color);
+  .navbar__option:is(:hover, :active) {
+    box-shadow: 0px 6px 12px #0004;
   }
 </style>
