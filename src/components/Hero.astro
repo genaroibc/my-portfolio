@@ -5,15 +5,18 @@ import LinkedinLogo from "./animated-icons/LinkedinLogo.astro";
 
 <section>
   <span class="intro">hi 👋, I am</span>
-  <h1>Genaro Bonavita</h1>
-
-  <h2>Frontend Developer</h2>
+  <h1 class="title">Genaro Bonavita</h1>
+  <h2 class="subtitle">Frontend Developer</h2>
 
   <p class="paragraph">
     I create solutions and solve problems through clean and maintainable code.
   </p>
 
   <nav class="contactNavbar">
+    <a download class="downloadCvBtn" href="/Genaro-Bonavita-CV.pdf">
+      Download CV
+    </a>
+
     <a class="contactNavbar__contactItem" href="https://github.com/GenaroIBC">
       <GitHubLogo />
     </a>
@@ -23,58 +26,40 @@ import LinkedinLogo from "./animated-icons/LinkedinLogo.astro";
     >
       <LinkedinLogo />
     </a>
-    <a download class="downloadCvBtn" href="/Genaro-Bonavita-CV.pdf">
-      Download CV <svg
-        class="downloadCvBtn__icon"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 384 512"
-        fill="#fff"
-      >
-        <path
-          d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"
-        ></path></svg
-      >
-    </a>
   </nav>
 </section>
 
 <style>
   .downloadCvBtn {
-    display: flex;
-    gap: 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
 
-    padding: 0.8rem;
-    border-radius: 5px;
-
-    background: #000;
-
+    background-color: transparent;
+    border: 5px solid var(--complement-color);
     text-decoration: none;
 
-    filter: brightness(85%);
-    transition: filter 0.2s ease;
+    transition: 0.2s ease-out;
+    transition-property: background-color, transform, border-color;
   }
 
-  .downloadCvBtn:hover {
-    filter: brightness(100%);
-  }
+  .downloadCvBtn:is(:hover, :focus) {
+    background: var(--complement-color);
 
-  .downloadCvBtn__icon {
-    max-width: 20px;
-    width: 1rem;
+    border-color: transparent;
+    transform: scale(1.1);
   }
 
   .contactNavbar {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
 
-    margin: 3rem auto;
+    margin: 3rem 0;
   }
 
   .contactNavbar__contactItem {
-    width: 2.5rem;
-    width: 2.5rem;
+    width: 2rem;
+    width: 2rem;
 
     aspect-ratio: 1/1;
     line-height: 1;
@@ -90,32 +75,35 @@ import LinkedinLogo from "./animated-icons/LinkedinLogo.astro";
   section {
     margin: 0 auto !important;
     padding: 10rem 0 !important;
-    text-align: center;
+    position: relative;
+    z-index: 100;
+
+    /* text-align: center; */
   }
 
   .paragraph {
-    margin: 1rem auto;
     max-width: 40ch;
 
     font-size: 1.3rem;
   }
 
-  h1 {
+  .title {
+    line-height: 1.3;
+    color: var(--terciary-color);
+
     font-size: 5rem;
     margin: 0 0 1rem;
   }
 
-  h2 {
+  .subtitle {
     margin: 0 auto 3rem;
     font-size: 1.8rem;
-    opacity: 0.9;
   }
 
   .intro {
     display: block;
 
     opacity: 0.8;
-    font-size: 1.2rem;
   }
 
   @media screen and (max-width: 768px) {
