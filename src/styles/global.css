@@ -95,9 +95,16 @@ img {
 }
 
 a {
-  color: #fff;
+  color: var(--complement-color);
+  text-decoration: none;
+}
 
+a:hover {
   text-decoration: underline;
+}
+
+b {
+  font-weight: 600;
 }
 
 p {
