@@ -171,7 +171,6 @@ const { items } = Astro.props;
 
   .slide {
     padding: 1rem;
-    background-color: var(--primary-color);
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -182,6 +181,10 @@ const { items } = Astro.props;
 
   .slide__info {
     display: flex;
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 4px;
+
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
