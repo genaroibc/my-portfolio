@@ -32,6 +32,12 @@ import Layout from "src/layouts/Layout.astro";
         navlinks
           .find(link => link.matches(`a[href="#${entryId}"]`))
           ?.classList.toggle("navlink-active", entry.isIntersecting);
+
+        if (entry.isIntersecting) {
+          $sections
+            .find(section => section.matches(`section[id="${entryId}"]`))
+            ?.classList.add("visible");
+        }
       }
     });
   };

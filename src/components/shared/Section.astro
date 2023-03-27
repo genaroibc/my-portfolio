@@ -17,8 +17,21 @@ const { title, id, subtitle } = Astro.props;
 
 <style>
   .pageSection {
-    margin: 20vh auto;
+    /* margin: 20vh auto; */
     padding: 1rem;
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+
+  .pageSection.visible {
+    animation: fadeIn 0.5s ease-in-out both;
+  }
+
+  @keyframes fadeIn {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .sectionTitle {
