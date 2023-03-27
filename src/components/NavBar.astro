@@ -3,6 +3,7 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
 ---
 
 <header id="page-header">
+  <a class="brand" href="#top"><span>GB</span></a>
   <nav id="navbar">
     {
       navBarLinks.map(({ href, title }) => (
@@ -59,6 +60,16 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
     font-size: 1.2rem;
   }
 
+  .brand {
+    font-weight: bolder;
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  .brand::first-letter {
+    color: var(--terciary-color);
+  }
+
   .navbar-link.navlink-active {
     text-shadow: 1px 1px 5px var(--terciary-color);
     color: #fff;
@@ -72,8 +83,14 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
     left: 0;
     right: 0;
 
+    max-width: 1400px;
+    margin: auto;
+
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    padding: 0.5rem 1rem;
 
     backdrop-filter: blur(3px);
     box-shadow: 0px 5px 10px 5px #0006;
@@ -194,7 +211,6 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
 
       font-size: 1.3rem;
 
-      flex-grow: 1;
       clip-path: unset;
     }
   }
