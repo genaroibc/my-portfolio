@@ -6,24 +6,27 @@ export type TIcon = {
   size: IconSize;
 };
 
-export interface Props extends TIcon {}
+export interface Props extends TIcon {
+  effect?: "opaque" | "colorized" | "animated";
+}
 
-const { size, name } = Astro.props;
+const { size, name, effect = "animated" } = Astro.props;
 ---
 
 <img
   src={`/svg/techs/${name}.svg`}
-  class={`icon-${size}`}
+  class={`icon-${size} ${effect}`}
   alt={`${name} icon`}
 />
 
 <style>
-  img {
+  img.animated,
+  img.opaque {
     filter: brightness(0);
     transition: filter 0.15s ease-out;
   }
 
-  img:hover {
+  img.animated:hover {
     filter: brightness(1);
   }
 

@@ -16,6 +16,8 @@ export type IconName =
   | "nextjs"
   | "node"
   | "react"
-  | "typescript";
+  | "typescript"
+  | "tailwind"
+  | "vitest";
 
 export type IconSize = "tiny" | "small" | "medium" | "large" | "huge";
