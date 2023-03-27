@@ -3,73 +3,39 @@ import { SOFT_SKILLS_LIST } from "src/assets/maps/skillsList.json";
 ---
 
 <h4>Soft Skills</h4>
-<div class="softSkillsCont">
+
+<div class="skills-container">
   {
     SOFT_SKILLS_LIST.map(({ content, title }) => (
-      <article class="softSkillsItem">
-        <h5 class="softSkillsItem__title">{title}</h5>
-        <p>{content}</p>
-      </article>
+      <div class="skill">
+        <h3 class="skill__title">{title}</h3>
+        <p class="skill__description">{content}</p>
+      </div>
     ))
   }
 </div>
 
 <style>
-  .softSkillsCont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 2rem;
   }
 
-  .softSkillsItem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 1rem;
-
-    border-radius: 5px;
-    padding: 1rem;
-
-    text-align: left;
-    background-color: var(--primary-color);
+  .skill {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(to bottom, #ffb1c4 10%, #cbb2ff);
   }
 
-  .softSkillsItem__title {
-    font-weight: bold;
-    width: fit-content;
-    padding: 1rem;
+  .skill__title {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
   }
 
-  .softSkillsItem:nth-of-type(even) {
-    text-align: right;
-    flex-direction: row-reverse;
-  }
-
-  .softSkillsItem:nth-of-type(odd) .softSkillsItem__title {
-    text-align: right;
-    border-right: 1px solid #fff;
-  }
-
-  .softSkillsItem:nth-of-type(even) .softSkillsItem__title {
-    text-align: left;
-    border-left: 1px solid #fff;
-  }
-
-  @media screen and (max-width: 552px) {
-    .softSkillsItem {
-      width: 100%;
-      flex-direction: column;
-    }
-
-    .softSkillsItem:nth-of-type(even) {
-      flex-direction: column;
-    }
-
-    .softSkillsItem:nth-of-type(even) * {
-      text-align: left;
-    }
+  .skill__description {
+    color: #000;
   }
 </style>
