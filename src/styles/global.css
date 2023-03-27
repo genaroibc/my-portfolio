@@ -15,13 +15,14 @@
   height: 8px;
 }
 
-*::-webkit-scrollbar-thumb:hover {
-  background-color: var(--complement-color);
-}
-
 *::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: var(--complement-color);
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #222;
 }
 
 * {
@@ -33,7 +34,8 @@
   --primary-color: #090c0d;
   --secondary-color: #222;
   --terciary-color: #da0037;
-  --complement-color: #00da91;
+  --complement-color: #7149c6;
+  --anchor-color: #ffdeb9;
 
   --text-color: #eee;
 
@@ -89,7 +91,7 @@ img {
 }
 
 a {
-  color: var(--complement-color);
+  color: var(--anchor-color);
   text-decoration: none;
 }
 
@@ -135,11 +137,5 @@ button:hover {
 @media screen and (min-width: 552px) {
   :root {
     font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  :root {
-    font-size: 20px;
   }
 }
