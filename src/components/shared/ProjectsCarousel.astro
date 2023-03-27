@@ -41,18 +41,6 @@ const { items } = Astro.props;
 </script>
 
 <div class="carouselContainer">
-  <button class="carouselContainer__navBtn prevSlideBtn" id="goToLeftBtn">
-    <img
-      width="30"
-      height="30"
-      src="/svg/arrow.svg"
-      alt="Go to previous slide"
-    />
-  </button>
-  <button class="carouselContainer__navBtn nextSlideBtn" id="goToRightBtn">
-    <img width="30" height="30" src="/svg/arrow.svg" alt="Go to next slide" />
-  </button>
-
   <div class="carousel" id="carousel">
     {
       items.map(
@@ -67,27 +55,48 @@ const { items } = Astro.props;
         }) => (
           <div class="slidewrapper">
             <div class="slide">
-              <div class="pictureContainer">
+              <div class="slide__pictureContainer">
                 <ProjectPicture
                   {...{ imgDescription, imgUrl, projectUrl, repoUrl }}
                 />
               </div>
-              <h5 class="projectTitle">{title}</h5>
-              <p class="projectPgph">{description}</p>
+              <div class="slide__info">
+                <h5 class="slide__info__projectTitle">{title}</h5>
+                <p class="slide__info__projectPgph">{description}</p>
 
-              <ul class="techsList">
-                {technologies.map((icon) => (
-                  <li>
-                    <Icon size={"small"} name={icon} />
-                  </li>
-                ))}
-              </ul>
+                <ul class="slide__info__techsList">
+                  {technologies.map(icon => (
+                    <li>
+                      <Icon size={"small"} name={icon} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         )
       )
     }
   </div>
+  <nav class="carouselContainer__navBar">
+    <button
+      class="carouselContainer__navBar__btn prevSlideBtn"
+      id="goToLeftBtn"
+    >
+      <img
+        width="30"
+        height="30"
+        src="/svg/arrow.svg"
+        alt="Go to previous slide"
+      />
+    </button>
+    <button
+      class="carouselContainer__navBar__btn nextSlideBtn"
+      id="goToRightBtn"
+    >
+      <img width="30" height="30" src="/svg/arrow.svg" alt="Go to next slide" />
+    </button>
+  </nav>
 </div>
 
 <style>
@@ -106,21 +115,23 @@ const { items } = Astro.props;
     margin: 1em auto;
   }
 
-  .carouselContainer__navBtn {
-    padding: 1.5rem;
-    position: absolute;
-    top: 50%;
-    z-index: 100;
+  .carouselContainer__navBar {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+  }
 
+  .carouselContainer__navBar__btn {
     background-color: unset;
 
+    padding: 0.2rem;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     opacity: 0.8;
     transition: opacity 0.3s ease;
-
-    align-self: center;
   }
-  .carouselContainer__navBtn:hover {
+
+  .carouselContainer__navBar__btn:hover {
     opacity: 1;
   }
   .prevSlideBtn {
@@ -131,8 +142,8 @@ const { items } = Astro.props;
     right: 0;
   }
 
-  .carouselContainer__navBtn img {
-    max-width: 60px;
+  .carouselContainer__navBar__btn img {
+    max-width: 40px;
     width: 3rem;
   }
 
@@ -160,43 +171,62 @@ const { items } = Astro.props;
 
   .slide {
     padding: 1rem;
-    text-align: center;
     background-color: var(--primary-color);
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    gap: 1rem;
     justify-content: center;
   }
 
-  .pictureContainer {
+  .slide__info {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .slide__pictureContainer {
     margin: auto;
     overflow: hidden;
     margin-bottom: 1rem;
   }
 
-  .projectTitle {
+  .slide__info__projectTitle {
     font-weight: bold;
-    margin: 1rem auto 0.5rem;
+    margin: 0 auto;
   }
 
-  .techsList {
+  .slide__info__techsList {
     display: flex;
-    margin: 0.5rem auto;
     border-radius: 5px;
     gap: 1rem;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background-color: #999;
+    background-color: #666;
     padding: 0.5rem;
+    align-self: end;
   }
 
-  .techsList li {
+  .slide__info__techsList li {
     line-height: 0;
   }
 
-  .projectPgph {
-    width: 80%;
-    margin: 0.8rem auto;
+  @media screen and (max-width: 768px) {
+    .slide {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .slide__info__projectPgph {
+      width: 80%;
+      margin: 0.8rem auto;
+    }
+
+    .slide__info__techsList {
+      align-self: center;
+    }
   }
 </style>
