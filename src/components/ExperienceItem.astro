@@ -18,67 +18,119 @@ const { company, role, since, to, accomplishments, responsibilities } =
   Astro.props;
 ---
 
-<article>
-  <label for={`${company.name}_${role.replace(" ", "-")}`}>
-    <h4 class="role">
+<article class="item">
+  <label
+    tabindex="auto"
+    class="item__title"
+    for={`${company.name}_${role.replace(" ", "-")}`}
+  >
+    <h4 class="item__title__role">
       {role} at <span>{company.name}</span>
     </h4>
+    <svg
+      fill="#fff"
+      class="item__title__expandIcon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512"
+    >
+      <path
+        d="M169.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L192 205.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"
+      ></path></svg
+    >
   </label>
   <input
+    class="item__checkbox"
+    hidden
+    checked
     type="checkbox"
     name={`${company.name}_${role.replace(" ", "-")}`}
     id={`${company.name}_${role.replace(" ", "-")}`}
   />
-  <div class="roleInfo">
-    <p class="roleInfo__item">
-      <img
-        width="20"
-        height="20"
-        class="roleInfo__item__icon"
-        src="/svg/calendar.svg"
-        alt=""
-      />
-      <time>{since}</time> &ndash; <time>{to}</time>
-    </p>
+  <section class="item__details">
+    <ul class="item__details__roleInfo">
+      <li class="item__details__roleInfo__item">
+        <img
+          width="20"
+          height="20"
+          class="item__details__roleInfo__item__icon"
+          src="/svg/calendar.svg"
+          alt=""
+        />
+        <time>{since}</time> &ndash; <time>{to}</time>
+      </li>
 
-    <p class="roleInfo__item">
-      <img
-        width="20"
-        height="20"
-        class="roleInfo__item__icon"
-        src="/svg/location.svg"
-        alt=""
-      />
-      <span>{company.location}</span>
-    </p>
-  </div>
+      <li class="item__details__roleInfo__item">
+        <img
+          width="20"
+          height="20"
+          class="item__details__roleInfo__item__icon"
+          src="/svg/location.svg"
+          alt=""
+        />
+        <span>{company.location}</span>
+      </li>
 
-  <div class="companyIndustry">
-    {
-      company.industries.map(el => (
-        <span class="companyIndustry__item">{el}</span>
-      ))
-    }
-  </div>
+      {
+        company.industries.map(el => (
+          <li class="item__details__roleInfo__item">{el}</li>
+        ))
+      }
+    </ul>
 
-  <h5 class="listTitle">Responsibilities</h5>
-  <ul class="list">
-    {responsibilities.map(item => <li>{item}</li>)}
-  </ul>
+    <h5 class="item__details__listTitle">Responsibilities</h5>
+    <ul class="item__details__list">
+      {responsibilities.map(item => <li>{item}</li>)}
+    </ul>
 
-  <h5 class="listTitle">Key accomplishments</h5>
-  <ul class="list">
-    {accomplishments.map(item => <li>{item}</li>)}
-  </ul>
+    <h5 class="item__details__listTitle">Key accomplishments</h5>
+    <ul class="item__details__list">
+      {accomplishments.map(item => <li>{item}</li>)}
+    </ul>
+  </section>
 </article>
 
 <style>
-  .role {
+  .item {
+    border: 2px solid #999;
+    border-radius: 6px;
+  }
+
+  .item__title {
+    border-radius: 6px;
+    display: flex;
+    background-color: #222;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+    gap: 1rem;
+
+    cursor: pointer;
+  }
+  .item__title__expandIcon {
+    margin: 0 5px;
+    max-width: 15px;
+
+    transition: 0.3s ease transform;
+  }
+
+  .item:has(.item__checkbox:checked) .item__title__expandIcon {
+    transform: rotate(-180deg);
+  }
+
+  .item__checkbox:checked + .item__details {
+    display: none;
+  }
+
+  .item__title__role {
     margin: 1rem 0;
     font-size: 1.5rem;
   }
 
-  .roleInfo {
+  .item__details {
+    padding: 1rem;
+    border-top: 2px solid #999;
+  }
+
+  .item__details__roleInfo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -86,7 +138,7 @@ const { company, role, since, to, accomplishments, responsibilities } =
     margin: 1rem 0;
   }
 
-  .roleInfo__item {
+  .item__details__roleInfo__item {
     padding: 0.5rem 1.2rem;
     border-radius: 1rem;
     background-color: var(--primary-color);
@@ -97,9 +149,11 @@ const { company, role, since, to, accomplishments, responsibilities } =
     gap: 0.3rem;
     align-items: center;
     margin: 0;
+
+    background-color: #222;
   }
 
-  .roleInfo__item__icon {
+  .item__details__roleInfo__item__icon {
     width: 1.2rem;
   }
 
@@ -118,7 +172,7 @@ const { company, role, since, to, accomplishments, responsibilities } =
     bottom: 0;
   } */
 
-  .list {
+  .item__details__list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -132,7 +186,7 @@ const { company, role, since, to, accomplishments, responsibilities } =
     font-size: 1rem;
   }
 
-  .list::before {
+  .item__details__list::before {
     content: "";
 
     width: 5px;
@@ -145,20 +199,12 @@ const { company, role, since, to, accomplishments, responsibilities } =
     background-color: var(--terciary-color);
   }
 
-  .listTitle {
+  .item__details__listTitle {
     font-size: 1.2rem;
     margin: 2rem 0 1rem;
   }
 
-  .companyIndustry {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-    font-size: 0.7rem;
-  }
-
-  .companyIndustry__item {
+  .item__details__companyIndustry__item {
     padding: 0.5rem 1.2rem;
     border-radius: 1rem;
     background-color: var(--primary-color);
