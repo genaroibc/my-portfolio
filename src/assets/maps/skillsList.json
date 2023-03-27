@@ -14,52 +14,24 @@
     },
     {
       "title": "Curious and creative",
-      "content": "I like even break something to learn how does it work (don't worry, always in a separated branch 😉)"
+      "content": "I like even break something to learn how does it work (don't worry, always in a separated branch)"
     }
   ],
-  "HARD_SKILLS": {
-    "SECTIONS": [
-      {
-        "sectionId": "learned",
-        "title": "🧠 I know"
-      },
-      {
-        "sectionId": "learning",
-        "title": "🌱  I'm learning"
-      },
-      {
-        "sectionId": "interested",
-        "title": "🔎 I'm interested in"
-      }
-    ],
-    "ITEMS": [
-      {
-        "sectionId": "learned",
-        "items": [
-          "html",
-          "css",
-          "javascript",
-          "typescript",
-          "react",
-          "mongodb",
-          "node",
-          "git",
-          "nextjs",
-          "bootstrap",
-          "tailwind",
-          "astro",
-          "testing-library",
-          "jest"
-        ]
-      },
-      {
-        "sectionId": "learning",
-        "items": ["rust"]
-      },
-      {
-        "sectionId": "interested",
-        "items": ["python", "aws", "blockchain"]
-      }
-    ]
-  }
+  "HARD_SKILLS": [
+    { "name": "html", "color": "#e34c26" },
+    { "name": "css", "color": "#33a9dc" },
+    { "name": "javascript", "color": "#F7DF1E" },
+    { "name": "typescript", "color": "#3178c6" },
+    { "name": "react", "color": "#61DBFB" },
+    { "name": "mongodb", "color": "#599636" },
+    { "name": "node", "color": "#68a063" },
+    { "name": "git", "color": "#f34f29" },
+    { "name": "nextjs", "color": "#fff" },
+    { "name": "bootstrap", "color": "#b27fff" },
+    { "name": "tailwind", "color": "#38BDF8" },
+    { "name": "astro", "color": "#FF5D01" },
+    { "name": "testing-library", "color": "#E33332" },
+    { "name": "jest", "color": "#ff6334" },
+    { "name": "vitest", "color": "#FCC72B" }
+  ]
 }

@@ -1,26 +1,9 @@
 ---
 import Section from "src/components/shared/Section.astro";
-import type { IconName } from "src/types";
 import Icon from "src/components/shared/Icon.astro";
 import SoftSkillsBox from "src/components/shared/SoftSkillsBox.astro";
-
-const technologies: { name: IconName; color: string }[] = [
-  { name: "html", color: "#e34c26" },
-  { name: "css", color: "#33a9dc" },
-  { name: "javascript", color: "#F7DF1E" },
-  { name: "typescript", color: "#3178c6" },
-  { name: "react", color: "#61DBFB" },
-  { name: "mongodb", color: "#599636" },
-  { name: "node", color: "#68a063" },
-  { name: "git", color: "#f34f29" },
-  { name: "nextjs", color: "#fff" },
-  { name: "bootstrap", color: "#b27fff" },
-  { name: "tailwind", color: "#38BDF8" },
-  { name: "astro", color: "#FF5D01" },
-  { name: "testing-library", color: "#E33332" },
-  { name: "jest", color: "#ff6334" },
-  { name: "vitest", color: "#FCC72B" }
-];
+import { HARD_SKILLS } from "src/assets/maps/skillsList.json";
+import type { IconName } from "src/types";
 ---
 
 <Section id="skills" title="My Skills">
@@ -28,9 +11,9 @@ const technologies: { name: IconName; color: string }[] = [
     <h4>Tech stack</h4>
     <ul class="skillsList">
       {
-        technologies.map(({ name, color }) => (
+        HARD_SKILLS.map(({ name, color }) => (
           <li style={`--tech-color: ${color}`} class="skillsList__item">
-            <Icon effect={"opaque"} size={"small"} name={name} />
+            <Icon effect={"opaque"} size={"small"} name={name as IconName} />
             {name}
           </li>
         ))
