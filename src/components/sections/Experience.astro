@@ -6,6 +6,6 @@ import HackathonWinner from "../HackathonWinner.astro";
 ---
 
 <Section title="Experience" id="experience">
+  {experience.map(item => <ExperienceItem {...item} />)}
   <HackathonWinner />
-  {experience.map((item) => <ExperienceItem {...item} />)}
 </Section>

@@ -19,10 +19,16 @@ const { company, role, since, to, accomplishments, responsibilities } =
 ---
 
 <article>
-  <h4 class="role">
-    {role} at <span>{company.name}</span>
-  </h4>
-
+  <label for={`${company.name}_${role.replace(" ", "-")}`}>
+    <h4 class="role">
+      {role} at <span>{company.name}</span>
+    </h4>
+  </label>
+  <input
+    type="checkbox"
+    name={`${company.name}_${role.replace(" ", "-")}`}
+    id={`${company.name}_${role.replace(" ", "-")}`}
+  />
   <div class="roleInfo">
     <p class="roleInfo__item">
       <img
@@ -49,7 +55,7 @@ const { company, role, since, to, accomplishments, responsibilities } =
 
   <div class="companyIndustry">
     {
-      company.industries.map((el) => (
+      company.industries.map(el => (
         <span class="companyIndustry__item">{el}</span>
       ))
     }
@@ -57,18 +63,19 @@ const { company, role, since, to, accomplishments, responsibilities } =
 
   <h5 class="listTitle">Responsibilities</h5>
   <ul class="list">
-    {responsibilities.map((item) => <li>{item}</li>)}
+    {responsibilities.map(item => <li>{item}</li>)}
   </ul>
 
   <h5 class="listTitle">Key accomplishments</h5>
   <ul class="list">
-    {accomplishments.map((item) => <li>{item}</li>)}
+    {accomplishments.map(item => <li>{item}</li>)}
   </ul>
 </article>
 
 <style>
   .role {
     margin: 1rem 0;
+    font-size: 1.5rem;
   }
 
   .roleInfo {
@@ -85,7 +92,7 @@ const { company, role, since, to, accomplishments, responsibilities } =
     background-color: var(--primary-color);
     opacity: 0.8;
 
-    font-size: 1rem;
+    font-size: 0.7rem;
     display: flex;
     gap: 0.3rem;
     align-items: center;
@@ -93,7 +100,7 @@ const { company, role, since, to, accomplishments, responsibilities } =
   }
 
   .roleInfo__item__icon {
-    width: 2rem;
+    width: 1.2rem;
   }
 
   /* article {
@@ -116,12 +123,30 @@ const { company, role, since, to, accomplishments, responsibilities } =
     flex-direction: column;
     gap: 1rem;
 
+    position: relative;
+
     background-color: var(--primary-color);
     padding: 1rem;
     border-radius: 5px;
+
+    font-size: 1rem;
+  }
+
+  .list::before {
+    content: "";
+
+    width: 5px;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: var(--terciary-color);
   }
 
   .listTitle {
+    font-size: 1.2rem;
     margin: 2rem 0 1rem;
   }
 
@@ -130,6 +155,7 @@ const { company, role, since, to, accomplishments, responsibilities } =
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+    font-size: 0.7rem;
   }
 
   .companyIndustry__item {
