@@ -36,7 +36,7 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
     document.getElementById("navbar")?.classList.toggle("menu-visible");
   }
 
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", e => {
     const target = e.target as HTMLElement;
 
     if (
@@ -75,8 +75,7 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
     display: flex;
     align-items: center;
 
-    background-color: var(--secondary-color);
-
+    backdrop-filter: blur(3px);
     box-shadow: 0px 5px 10px 5px #0006;
     transition: top 0.3s ease-in;
   }
@@ -84,6 +83,7 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
   #page-header.page-header-hidden {
     top: -150px;
   }
+
   /* *** NAVBAR *** */
   #navbar {
     position: absolute;
@@ -102,8 +102,6 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
 
     clip-path: circle(0 at 50% 0);
     transition: clip-path 0.7s ease, top 0.7s ease;
-
-    background-color: var(--secondary-color);
   }
 
   .navbar-link {
