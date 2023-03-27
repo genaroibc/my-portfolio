@@ -72,14 +72,15 @@ import OvalShadow from "./shared/OvalShadow.astro";
     text-decoration: none;
 
     transition: 0.2s ease-out;
-    transition-property: background-color;
+    transition-property: box-shadow, transform;
     border: 3px solid var(--complement-color);
     color: #fff;
   }
 
   .downloadCvBtn:is(:hover, :focus) {
-    background-color: var(--complement-color);
-    color: #000;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.3rem var(--complement-color);
+    text-decoration: none;
   }
 
   .contactNavbar {
@@ -110,8 +111,6 @@ import OvalShadow from "./shared/OvalShadow.astro";
     padding: 10rem 0 !important;
     position: relative;
     z-index: 100;
-
-    /* text-align: center; */
   }
 
   .paragraph {
