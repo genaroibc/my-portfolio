@@ -5,10 +5,6 @@ import ProjectsCarousel from "src/components/shared/ProjectsCarousel.astro";
 import Section from "src/components/shared/Section.astro";
 ---
 
-<Section
-  id="projects"
-  title="My projects"
-  subtitle="Some projects I've worked on:"
->
+<Section id="projects" title="My projects">
   <ProjectsCarousel items={projectsMap as TProjectCard[]} />
 </Section>

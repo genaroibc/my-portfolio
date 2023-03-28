@@ -1,16 +1,14 @@
 ---
 export type Props = {
   title: string;
-  subtitle?: string;
   id: string;
 };
 
-const { title, id, subtitle } = Astro.props;
+const { title, id } = Astro.props;
 ---
 
 <section class="pageSection" id={id}>
   <h3 class="sectionTitle">{title}</h3>
-  {subtitle && <h4>{subtitle}</h4>}
 
   <slot />
 </section>
@@ -37,7 +35,7 @@ const { title, id, subtitle } = Astro.props;
   .sectionTitle {
     padding-top: 7rem;
     color: var(--complement-color);
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .sectionTitle::before {

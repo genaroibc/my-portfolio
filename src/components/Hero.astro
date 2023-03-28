@@ -5,7 +5,6 @@ import OvalShadow from "./shared/OvalShadow.astro";
 ---
 
 <section>
-  <span class="intro">hi 👋, I am</span>
   <h1 class="title">Genaro Bonavita</h1>
   <h2 class="subtitle">Frontend Developer</h2>
 
@@ -88,6 +87,7 @@ import OvalShadow from "./shared/OvalShadow.astro";
   .contactNavbar {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
 
     margin: 3rem 0;
@@ -109,7 +109,7 @@ import OvalShadow from "./shared/OvalShadow.astro";
   }
 
   section {
-    margin: 0 auto !important;
+    margin: 5vh auto !important;
     padding: 10rem 0 !important;
     position: relative;
     z-index: 100;
@@ -118,7 +118,7 @@ import OvalShadow from "./shared/OvalShadow.astro";
   .paragraph {
     max-width: 40ch;
 
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .info {
@@ -143,15 +143,20 @@ import OvalShadow from "./shared/OvalShadow.astro";
     animation: enterInView 0.5s 0.2s ease-out both;
   }
 
-  .intro {
-    display: block;
-
-    opacity: 0.8;
-    animation: enterInView 0.5s ease-out both;
-  }
-
   @media screen and (max-width: 768px) {
-    h1 {
+    section {
+      text-align: center;
+    }
+
+    .contactNavbar {
+      width: fit-content;
+      margin: 2rem auto;
+    }
+
+    .paragraph {
+      margin: 0 auto;
+    }
+    .title {
       font-size: 4rem;
     }
   }
