@@ -3,7 +3,6 @@ export type ExperienceItem = {
   role: string;
   company: {
     name: string;
-    industries: string[];
     location: string;
   };
   since: string;
@@ -69,12 +68,6 @@ const { company, role, since, to, accomplishments, responsibilities } =
         />
         <span>{company.location}</span>
       </li>
-
-      {
-        company.industries.map(el => (
-          <li class="item__details__roleInfo__item">{el}</li>
-        ))
-      }
     </ul>
 
     <h5 class="item__details__listTitle">Responsibilities</h5>
@@ -143,7 +136,7 @@ const { company, role, since, to, accomplishments, responsibilities } =
     background-color: var(--primary-color);
     opacity: 0.8;
 
-    font-size: 0.7rem;
+    /* font-size: 0.7rem; */
     display: flex;
     gap: 0.3rem;
     align-items: center;
@@ -188,7 +181,7 @@ const { company, role, since, to, accomplishments, responsibilities } =
   .item__details__list::before {
     content: "";
 
-    width: 5px;
+    width: 3px;
     height: 100%;
 
     position: absolute;
@@ -201,12 +194,5 @@ const { company, role, since, to, accomplishments, responsibilities } =
   .item__details__listTitle {
     font-size: 1.2rem;
     margin: 2rem 0 1rem;
-  }
-
-  .item__details__companyIndustry__item {
-    padding: 0.5rem 1.2rem;
-    border-radius: 1rem;
-    background-color: var(--primary-color);
-    opacity: 0.8;
   }
 </style>
