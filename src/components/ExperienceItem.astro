@@ -23,9 +23,12 @@ const { company, role, since, to, accomplishments, responsibilities } =
     class="item__title"
     for={`${company.name}_${role.replace(" ", "-")}`}
   >
-    <h4 class="item__title__role">
-      {role} at <span>{company.name}</span>
-    </h4>
+    <div>
+      <h4 class="item__title__role">
+        {role} at <span>{company.name}</span>
+      </h4>
+      <span class="item__title__date">{since} - {to}</span>
+    </div>
     <svg
       fill="#fff"
       class="item__title__expandIcon"
@@ -40,24 +43,12 @@ const { company, role, since, to, accomplishments, responsibilities } =
   <input
     class="item__checkbox"
     hidden
-    checked
     type="checkbox"
     name={`${company.name}_${role.replace(" ", "-")}`}
     id={`${company.name}_${role.replace(" ", "-")}`}
   />
   <section class="item__details">
     <ul class="item__details__roleInfo">
-      <li class="item__details__roleInfo__item">
-        <img
-          width="20"
-          height="20"
-          class="item__details__roleInfo__item__icon"
-          src="/svg/calendar.svg"
-          alt=""
-        />
-        <time>{since}</time> &ndash; <time>{to}</time>
-      </li>
-
       <li class="item__details__roleInfo__item">
         <img
           width="20"
@@ -92,7 +83,7 @@ const { company, role, since, to, accomplishments, responsibilities } =
     border-radius: 6px;
     display: flex;
     background-color: #222;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     justify-content: space-between;
     gap: 1rem;
 
@@ -114,9 +105,12 @@ const { company, role, since, to, accomplishments, responsibilities } =
   }
 
   .item__title__role {
-    margin: 1rem 0;
+    margin: 0 0 0.5rem;
   }
 
+  .item__title__date {
+    opacity: 0.9;
+  }
   .item__details {
     padding: 1rem;
     border-top: 2px solid #999;
