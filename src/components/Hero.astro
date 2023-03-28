@@ -16,25 +16,27 @@ import OvalShadow from "./shared/OvalShadow.astro";
     <OvalShadow />
   </div>
 
-  <p class="paragraph">
-    I create solutions and solve problems through clean and maintainable code.
-  </p>
+  <div class="info">
+    <p class="paragraph">
+      I create solutions and solve problems through clean and maintainable code.
+    </p>
 
-  <nav class="contactNavbar">
-    <a download class="downloadCvBtn" href="/Genaro-Bonavita-CV.pdf">
-      Download CV
-    </a>
+    <nav class="contactNavbar">
+      <a download class="downloadCvBtn" href="/Genaro-Bonavita-CV.pdf">
+        Download CV
+      </a>
 
-    <a class="contactNavbar__contactItem" href="https://github.com/GenaroIBC">
-      <GitHubLogo />
-    </a>
-    <a
-      class="contactNavbar__contactItem"
-      href="https://linkedin.com/in/genaro-bonavita"
-    >
-      <LinkedinLogo />
-    </a>
-  </nav>
+      <a class="contactNavbar__contactItem" href="https://github.com/GenaroIBC">
+        <GitHubLogo />
+      </a>
+      <a
+        class="contactNavbar__contactItem"
+        href="https://linkedin.com/in/genaro-bonavita"
+      >
+        <LinkedinLogo />
+      </a>
+    </nav>
+  </div>
 </section>
 
 <style>
@@ -119,23 +121,33 @@ import OvalShadow from "./shared/OvalShadow.astro";
     font-size: 1.3rem;
   }
 
+  .info {
+    animation: enterInViewFromLeft 0.5s 0.7s ease-out both;
+  }
+
   .title {
     line-height: 1.3;
     color: var(--terciary-color);
 
-    font-size: 5rem;
+    font-size: 6rem;
     margin: 0 0 1rem;
+
+    animation: enterInView 0.5s ease-out both;
   }
 
   .subtitle {
     margin: 0 auto 3rem;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+
+    color: #cdb4ff;
+    animation: enterInView 0.5s 0.2s ease-out both;
   }
 
   .intro {
     display: block;
 
     opacity: 0.8;
+    animation: enterInView 0.5s ease-out both;
   }
 
   @media screen and (max-width: 768px) {
@@ -159,6 +171,29 @@ import OvalShadow from "./shared/OvalShadow.astro";
     }
     to {
       transform: translateY(200px);
+    }
+  }
+
+  /* create and animation to fade in the title and subtitle */
+  @keyframes enterInView {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes enterInViewFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 </style>
