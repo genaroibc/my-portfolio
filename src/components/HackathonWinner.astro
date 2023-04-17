@@ -1,7 +1,8 @@
 <article class="hackathonWinnerArticle">
   <h4>CloudCreate hackathon 2nd place winner 🥈</h4>
+
   <p>
-    The CloudCreate hackathon, presented by
+    The <b>CloudCreate hackathon</b>, presented by
     <a href="https://midu.dev">Miguel Ángel Durán</a>, was a competition where
     participants had to build a product from scratch using
     <a href="https://cloudinary.com/">Cloudinary</a>
@@ -18,10 +19,61 @@
       posted on Cloudinary's blog</a
     >.
   </p>
+  <div class="articleContentWrapper">
+    <video
+      width="300"
+      class="hackathonProjectVideo"
+      src=""
+      controls
+      autoplay
+      loop
+      muted
+    >
+    </video>
+
+    <div>
+      <p>
+        <b>Clippitt</b> helps you to share Twitch clips in other platforms whose
+        video format is vertical.
+      </p>
+
+      <p>
+        Instead of manually downloading the clip and using a video editor, you
+        simply enter the Twitch clip URL and <b>it does all the work for you</b
+        >. You can choose between different layouts, and then download the video
+      </p>
+      <p>
+        You can try it at <a href="http://clippitt.app/">clippitt.app</a> and
+        <a href="https://github.com/genaroibc/clippitt"
+          >visit the repo on GitHub</a
+        >.
+      </p>
+    </div>
+  </div>
 </article>
 
 <style>
   .hackathonWinnerArticle {
     margin: 2rem 0 7rem;
+  }
+
+  .articleContentWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1.5rem;
+    padding: 1rem;
+
+    background: #000;
+    border-radius: 1rem;
+  }
+
+  .articleContentWrapper p:first-of-type {
+    margin-top: 0;
+  }
+
+  .hackathonProjectVideo {
+    width: 20rem;
+    border-radius: 1rem;
   }
 </style>
