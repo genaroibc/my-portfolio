@@ -17,13 +17,22 @@
     "projectUrl": "https://ikodi.vercel.app/"
   },
   {
+    "title": "TailwindHub",
+    "imgUrl": "/img/projects/tailwindhub.webp",
+    "technologies": ["nextjs", "react", "typescript", "tailwind"],
+    "imgDescription": "TailwindHub website preview",
+    "description": "An open-source platform to share UI components using TailwindCSS. Create your component with its integrated code editor, login with GitHub and share it to the community.",
+    "repoUrl": "https://github.com/genaroibc/tailwindhub",
+    "projectUrl": "https://tailwindhub.dev/"
+  },
+  {
     "title": "Clippitt",
     "imgUrl": "/img/projects/clippitt.webp",
     "technologies": ["nextjs", "react", "typescript", "cloudinary", "tailwind"],
     "imgDescription": "Clippitt website preview",
     "description": "2nd place winner in the CloudCreate Hackathon 2023. Simple: Upload a Twitch clip, select the desired areas, choose a layout, and automatically get a vertical video for YouTube Shorts, TikTok, and Instagram reels.",
     "repoUrl": "https://github.com/genaroibc/clippitt",
-    "projectUrl": "https://clippitt.vercel.app/"
+    "projectUrl": "https://clippitt.app/"
   },
   {
     "title": "wc-notify",
