@@ -61,8 +61,10 @@ const { items } = Astro.props;
                 />
               </div>
               <div class="slide__info">
-                <h5 class="slide__info__projectTitle">{title}</h5>
-                <p class="slide__info__projectPgph">{description}</p>
+                <div>
+                  <h5 class="slide__info__projectTitle">{title}</h5>
+                  <p class="slide__info__projectPgph">{description}</p>
+                </div>
 
                 <ul class="slide__info__techsList">
                   {technologies.map(icon => (
@@ -170,18 +172,17 @@ const { items } = Astro.props;
   }
 
   .slide {
-    padding: 1rem;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    /* gap: 1rem; */
+    background-color: var(--secondary-color);
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
   }
 
   .slide__info {
     display: flex;
-    background-color: var(--secondary-color);
-    padding: 1.5rem;
-    border-radius: 4px;
+    padding: 2rem;
 
     flex-direction: column;
     align-items: stretch;
@@ -191,6 +192,8 @@ const { items } = Astro.props;
   .slide__pictureContainer {
     margin: auto;
     overflow: hidden;
+    height: 100%;
+    width: 100%;
   }
 
   .slide__info__projectTitle {
