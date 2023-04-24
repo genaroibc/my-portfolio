@@ -43,7 +43,8 @@ import Layout from "src/layouts/Layout.astro";
   };
 
   const observer = new IntersectionObserver(observerHandler, {
-    threshold: [0.5, 0.7]
+    rootMargin: "0px 0px -300px 0px",
+    threshold: [0]
   });
 
   $sections.forEach($section => {
