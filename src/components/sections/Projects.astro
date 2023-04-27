@@ -67,7 +67,7 @@ import ProjectPicture from "../shared/ProjectPicture.astro";
   .project_card {
     background-color: #000;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
@@ -76,8 +76,6 @@ import ProjectPicture from "../shared/ProjectPicture.astro";
   }
 
   .project_card__info {
-    width: 50%;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -87,7 +85,7 @@ import ProjectPicture from "../shared/ProjectPicture.astro";
   }
 
   .project_card__picture_wrapper {
-    width: 50%;
+    width: 100%;
   }
 
   .project_card__info__technologies {
@@ -111,5 +109,19 @@ import ProjectPicture from "../shared/ProjectPicture.astro";
   .cta__paragraph {
     text-align: center;
     margin: 3rem auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    .project_card {
+      flex-direction: row;
+    }
+
+    .project_card__info {
+      width: 100%;
+    }
+    .project_card__picture_wrapper,
+    .project_card__info {
+      width: 50%;
+    }
   }
 </style>
