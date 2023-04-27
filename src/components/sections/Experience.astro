@@ -6,6 +6,15 @@ import HackathonWinner from "../HackathonWinner.astro";
 ---
 
 <Section title="Experience" id="experience">
-  {experience.map(item => <ExperienceItem {...item} />)}
+  <div class="experience_wrapper">
+    {experience.map(item => <ExperienceItem {...item} />)}
+  </div>
+
   <HackathonWinner />
 </Section>
+
+<style>
+  .experience_wrapper {
+    margin-bottom: 5rem;
+  }
+</style>
