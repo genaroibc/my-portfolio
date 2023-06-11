@@ -72,11 +72,6 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
     color: var(--terciary-color);
   }
 
-  .navbar-link.navlink-active {
-    text-shadow: 1px 1px 5px var(--terciary-color);
-    color: #fff;
-  }
-
   /* *** HEADER *** */
   #page-header {
     position: fixed;
@@ -125,14 +120,42 @@ import navBarLinks from "src/assets/maps/navbarLinks.json";
   .navbar-link {
     padding: 0.8rem;
     text-decoration: none;
-    color: #ccc;
+    color: #bbb;
 
     transition: color 0.2s ease;
   }
 
-  .navbar-link:hover {
+  .navbar-link {
+    color: #ddd;
+    position: relative;
+  }
+  .navbar-link::after,
+  .navbar-link::before {
+    position: absolute;
+    content: "";
+    transition: width 0.3s;
+    width: 0;
+    height: 1px;
+    bottom: 0px;
+    background-color: #fff;
+  }
+
+  .navbar-link::after {
+    right: 50%;
+  }
+
+  .navbar-link::before {
+    left: 50%;
+  }
+
+  .navbar-link:is(.navlink-active, :hover)::after,
+  .navbar-link:is(.navlink-active, :hover)::before {
+    width: 50%;
+  }
+
+  .navbar-link:is(.navlink-active, :hover) {
     color: #fff;
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   #navbar.menu-visible {
