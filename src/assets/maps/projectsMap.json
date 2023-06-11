@@ -62,6 +62,15 @@
     "projectUrl": "https://codesandbox.io/s/wc-notify-demo-nn687m"
   },
   {
+    "title": "InfoJobs UI",
+    "imgUrl": "/img/projects/infojobs-ui.webp",
+    "technologies": ["typescript", "react", "tailwind"],
+    "imgDescription": "InfoJobs UI website preview",
+    "description": "A components library for React that follows the InfoJobs style guide. It's available as an npm package (infojobs-ui) and has been part of the Midudev-InfoJobs hackathon in 2023.",
+    "repoUrl": "https://github.com/GenaroIBC/infojobs-ui",
+    "projectUrl": "https://infojobs-ui.vercel.app/"
+  },
+  {
     "title": "Kings League Project",
     "imgUrl": "/img/projects/kings-league-project.webp",
     "technologies": [
