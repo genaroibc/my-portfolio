@@ -44,6 +44,15 @@
     "projectUrl": "https://minecraft-clone-hwmx.vercel.app/"
   },
   {
+    "title": "Landing Page",
+    "imgUrl": "/img/projects/landing-page.webp",
+    "technologies": ["astro", "html", "tailwind"],
+    "imgDescription": "Landing Page website preview",
+    "description": "A simple, beautiful landing page built along with @jsha64. He made the HTML structure and I took care of the styles. Inspired by a Dribble design available in its Credits section.",
+    "repoUrl": "https://github.com/GenaroIBC/landing-page",
+    "projectUrl": "https://landing-page-genaro-jorge.netlify.app/"
+  },
+  {
     "title": "wc-notify",
     "imgUrl": "/img/projects/wc-notify.webp",
     "technologies": ["typescript", "javascript", "node", "css"],
