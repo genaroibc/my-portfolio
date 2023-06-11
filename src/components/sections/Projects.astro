@@ -17,9 +17,12 @@ import ProjectPicture from "../shared/ProjectPicture.astro";
           projectUrl,
           repoUrl,
           technologies,
-          title
+          title,
+          isCollaborative
         }) => (
-          <article class="project_card">
+          <article
+            class={`${isCollaborative ? "is_collaborative" : ""} project_card`}
+          >
             <div class="project_card__picture_wrapper">
               <ProjectPicture
                 imgDescription={imgDescription}
@@ -73,6 +76,19 @@ import ProjectPicture from "../shared/ProjectPicture.astro";
 
     overflow: hidden;
     border-radius: 1rem;
+    position: relative;
+  }
+
+  .project_card.is_collaborative::after {
+    content: "collaborative";
+    padding: 0.5rem 3rem;
+    position: absolute;
+    top: 2rem;
+
+    left: -3rem;
+    background-color: #0c0c4c;
+    color: #d2ddff;
+    transform: rotateZ(-45deg);
   }
 
   .project_card__info {

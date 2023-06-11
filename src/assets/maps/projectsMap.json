@@ -14,7 +14,8 @@
     "imgDescription": "IKodi website preview",
     "description": "IKodi is my personal blog, where I share my knowledge writing posts about different tools, technologies and concepts related to the world of web development. With comment system included!",
     "repoUrl": "https://github.com/GenaroIBC/ikodi",
-    "projectUrl": "https://ikodi.vercel.app/"
+    "projectUrl": "https://ikodi.vercel.app/",
+    "isCollaborative": false
   },
   {
     "title": "TailwindHub",
@@ -23,7 +24,8 @@
     "imgDescription": "TailwindHub website preview",
     "description": "An open-source platform to share UI components using TailwindCSS. Create your component with its integrated code editor, login with GitHub and share it to the community.",
     "repoUrl": "https://github.com/genaroibc/tailwindhub",
-    "projectUrl": "https://tailwindhub.dev/"
+    "projectUrl": "https://tailwindhub.dev/",
+    "isCollaborative": false
   },
   {
     "title": "Clippitt",
@@ -32,7 +34,8 @@
     "imgDescription": "Clippitt website preview",
     "description": "2nd place winner in the CloudCreate Hackathon 2023. Simple: Upload a Twitch clip, select the desired areas, choose a layout, and automatically get a vertical video for YouTube Shorts, TikTok, and Instagram reels.",
     "repoUrl": "https://github.com/genaroibc/clippitt",
-    "projectUrl": "https://clippitt.app/"
+    "projectUrl": "https://clippitt.app/",
+    "isCollaborative": false
   },
   {
     "title": "Minecraft Clone",
@@ -41,7 +44,8 @@
     "imgDescription": "Minecraft Clone website preview",
     "description": "A fully functional Minecraft clone, based on the freeCodeCamp tutorial, using Three.js (a 2D/3D JavaScript library), React and TypeScript.",
     "repoUrl": "https://github.com/GenaroIBC/minecraft-clone",
-    "projectUrl": "https://minecraft-clone-hwmx.vercel.app/"
+    "projectUrl": "https://minecraft-clone-hwmx.vercel.app/",
+    "isCollaborative": false
   },
   {
     "title": "Landing Page",
@@ -50,7 +54,8 @@
     "imgDescription": "Landing Page website preview",
     "description": "A simple, beautiful landing page built along with @jsha64. He made the HTML structure and I took care of the styles. Inspired by a Dribble design available in its Credits section.",
     "repoUrl": "https://github.com/GenaroIBC/landing-page",
-    "projectUrl": "https://landing-page-genaro-jorge.netlify.app/"
+    "projectUrl": "https://landing-page-genaro-jorge.netlify.app/",
+    "isCollaborative": true
   },
   {
     "title": "wc-notify",
@@ -59,7 +64,8 @@
     "imgDescription": "wc-notify website preview",
     "description": "wc-notify is an npm package to show simple and customizable toast notifications. It's built on top of the Web Components standard, so it is available on all frameworks. It allows you to customize the duration, theme, animation, and much more.",
     "repoUrl": "https://github.com/GenaroIBC/wc-notify",
-    "projectUrl": "https://codesandbox.io/s/wc-notify-demo-nn687m"
+    "projectUrl": "https://codesandbox.io/s/wc-notify-demo-nn687m",
+    "isCollaborative": false
   },
   {
     "title": "InfoJobs UI",
@@ -68,7 +74,8 @@
     "imgDescription": "InfoJobs UI website preview",
     "description": "A components library for React that follows the InfoJobs style guide. It's available as an npm package (infojobs-ui) and has been part of the Midudev-InfoJobs hackathon in 2023.",
     "repoUrl": "https://github.com/GenaroIBC/infojobs-ui",
-    "projectUrl": "https://infojobs-ui.vercel.app/"
+    "projectUrl": "https://infojobs-ui.vercel.app/",
+    "isCollaborative": false
   },
   {
     "title": "Kings League Project",
@@ -84,7 +91,8 @@
     "imgDescription": "Kings League Project website preview",
     "description": "API and website of the Kings League made for educational purposes. Open-source. Web scrapping, GitHub Actions and testing. I've collaborated in the UI and writing documentation.",
     "repoUrl": "https://github.com/midudev/kings-league-project",
-    "projectUrl": "https://kingsleague.dev/"
+    "projectUrl": "https://kingsleague.dev/",
+    "isCollaborative": true
   },
   {
     "title": "Animated Weather",
@@ -93,7 +101,8 @@
     "imgDescription": "Animated Weather website preview",
     "description": "Create a video of the weather status anywhere in the world. Customize music, colors, and then download it to share with others.",
     "repoUrl": "https://github.com/GenaroIBC/animated-weather",
-    "projectUrl": "https://animated-weather.vercel.app/"
+    "projectUrl": "https://animated-weather.vercel.app/",
+    "isCollaborative": false
   },
   {
     "title": "Quick Papper",
@@ -109,7 +118,8 @@
     "imgDescription": "Quick Papper website preview",
     "description": "An AI-powered application to generate blog drafts from just a title. You can summarize, extend or regenerate each slice of the blog, and then export it in HTML, Markdown or plain text. Part of midudev-cohere hackathon.",
     "repoUrl": "https://github.com/GenaroIBC/quick-papper",
-    "projectUrl": "https://quick-papper.vercel.app/"
+    "projectUrl": "https://quick-papper.vercel.app/",
+    "isCollaborative": false
   },
   {
     "title": "Shape Snap",
@@ -118,9 +128,9 @@
     "imgDescription": "Shape Snap website preview",
     "description": "A generator of banners for social networks like Twitter, LinkedIn and Youtube. You upload only one image, and Shape Snap automatically crops it to the needed size for each platform.",
     "repoUrl": "https://github.com/GenaroIBC/shape-snap",
-    "projectUrl": "https://shape-snap.vercel.app/"
+    "projectUrl": "https://shape-snap.vercel.app/",
+    "isCollaborative": false
   },
-
   {
     "title": "Full-stack ToDo",
     "imgUrl": "/img/projects/fullstack-todo.webp",
@@ -128,7 +138,8 @@
     "imgDescription": "ToDo website preview",
     "description": "The typical To-Do application, but integrating both client and server sides, with users authentication and data persistence with MongoDB.",
     "repoUrl": "https://github.com/GenaroIBC/fullstack-todo-app",
-    "projectUrl": "https://fullstack-todo-app-ten.vercel.app/tasks"
+    "projectUrl": "https://fullstack-todo-app-ten.vercel.app/tasks",
+    "isCollaborative": false
   },
   {
     "title": "tic-tac-toe",
@@ -137,7 +148,8 @@
     "imgDescription": "Tic Tac Toe website preview",
     "description": "In this version of the well-known Tic-Tac-Toe, you can play versus the machine, store your points locally to play later, change players colors and some other funny features.",
     "repoUrl": "https://github.com/GenaroIBC/tic-tac-toe",
-    "projectUrl": "https://genaroibc.github.io/tic-tac-toe"
+    "projectUrl": "https://genaroibc.github.io/tic-tac-toe",
+    "isCollaborative": false
   },
   {
     "title": "Connect Four",
@@ -146,7 +158,8 @@
     "imgDescription": "Connect Four website preview",
     "description": "My version of the \"Connect Four\" game, implementing OOP with TypeScript and separating logic from view.",
     "repoUrl": "https://github.com/GenaroIBC/connect-four",
-    "projectUrl": "https://connect-four-mauve.vercel.app/"
+    "projectUrl": "https://connect-four-mauve.vercel.app/",
+    "isCollaborative": false
   },
   {
     "title": "Crypto Assets",
@@ -155,7 +168,8 @@
     "imgDescription": "Crypto Assets website preview",
     "description": "A simple dashboard to view your crypto address's transactions, with a minimalist design based on Material Design style guidelines.",
     "repoUrl": "https://github.com/CollaborativeTeam/challenge/tree/develop-genaro",
-    "projectUrl": "https://challenge-cyan.vercel.app/"
+    "projectUrl": "https://challenge-cyan.vercel.app/",
+    "isCollaborative": false
   },
   {
     "title": "Password Generator",
@@ -164,6 +178,7 @@
     "imgDescription": "Password generator website preview",
     "description": "A custom and secure password generator. The combination of numbers, symbols, and upper, lower and mixed case result in a wide variety of combinations. Made with vanilla JS.",
     "repoUrl": "https://github.com/GenaroIBC/password-generator",
-    "projectUrl": "https://pass-generator-2022.netlify.app/"
+    "projectUrl": "https://pass-generator-2022.netlify.app/",
+    "isCollaborative": false
   }
 ]
