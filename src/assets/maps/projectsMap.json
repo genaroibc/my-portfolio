@@ -48,16 +48,6 @@
     "isCollaborative": false
   },
   {
-    "title": "Landing Page",
-    "imgUrl": "/img/projects/landing-page.webp",
-    "technologies": ["astro", "html", "tailwind"],
-    "imgDescription": "Landing Page website preview",
-    "description": "A simple, beautiful landing page built along with @jsha64. He made the HTML structure and I took care of the styles. Inspired by a Dribble design available in its Credits section.",
-    "repoUrl": "https://github.com/GenaroIBC/landing-page",
-    "projectUrl": "https://landing-page-genaro-jorge.netlify.app/",
-    "isCollaborative": true
-  },
-  {
     "title": "wc-notify",
     "imgUrl": "/img/projects/wc-notify.webp",
     "technologies": ["typescript", "javascript", "node", "css"],
@@ -76,23 +66,6 @@
     "repoUrl": "https://github.com/GenaroIBC/infojobs-ui",
     "projectUrl": "https://infojobs-ui.vercel.app/",
     "isCollaborative": false
-  },
-  {
-    "title": "Kings League Project",
-    "imgUrl": "/img/projects/kings-league-project.webp",
-    "technologies": [
-      "astro",
-      "javascript",
-      "node",
-      "vitest",
-      "tailwind",
-      "cloudflare-workers"
-    ],
-    "imgDescription": "Kings League Project website preview",
-    "description": "API and website of the Kings League made for educational purposes. Open-source. Web scrapping, GitHub Actions and testing. I've collaborated in the UI and writing documentation.",
-    "repoUrl": "https://github.com/midudev/kings-league-project",
-    "projectUrl": "https://kingsleague.dev/",
-    "isCollaborative": true
   },
   {
     "title": "Animated Weather",
@@ -129,56 +102,6 @@
     "description": "A generator of banners for social networks like Twitter, LinkedIn and Youtube. You upload only one image, and Shape Snap automatically crops it to the needed size for each platform.",
     "repoUrl": "https://github.com/GenaroIBC/shape-snap",
     "projectUrl": "https://shape-snap.vercel.app/",
-    "isCollaborative": false
-  },
-  {
-    "title": "Full-stack ToDo",
-    "imgUrl": "/img/projects/fullstack-todo.webp",
-    "technologies": ["nextjs", "react", "javascript", "css", "mongodb"],
-    "imgDescription": "ToDo website preview",
-    "description": "The typical To-Do application, but integrating both client and server sides, with users authentication and data persistence with MongoDB.",
-    "repoUrl": "https://github.com/GenaroIBC/fullstack-todo-app",
-    "projectUrl": "https://fullstack-todo-app-ten.vercel.app/tasks",
-    "isCollaborative": false
-  },
-  {
-    "title": "tic-tac-toe",
-    "imgUrl": "/img/projects/tictactoe.webp",
-    "technologies": ["javascript", "css", "html"],
-    "imgDescription": "Tic Tac Toe website preview",
-    "description": "In this version of the well-known Tic-Tac-Toe, you can play versus the machine, store your points locally to play later, change players colors and some other funny features.",
-    "repoUrl": "https://github.com/GenaroIBC/tic-tac-toe",
-    "projectUrl": "https://genaroibc.github.io/tic-tac-toe",
-    "isCollaborative": false
-  },
-  {
-    "title": "Connect Four",
-    "imgUrl": "/img/projects/connect-four.webp",
-    "technologies": ["react", "typescript", "css", "html"],
-    "imgDescription": "Connect Four website preview",
-    "description": "My version of the \"Connect Four\" game, implementing OOP with TypeScript and separating logic from view.",
-    "repoUrl": "https://github.com/GenaroIBC/connect-four",
-    "projectUrl": "https://connect-four-mauve.vercel.app/",
-    "isCollaborative": false
-  },
-  {
-    "title": "Crypto Assets",
-    "imgUrl": "/img/projects/crypto-assets.webp",
-    "technologies": ["react", "nextjs", "javascript", "css"],
-    "imgDescription": "Crypto Assets website preview",
-    "description": "A simple dashboard to view your crypto address's transactions, with a minimalist design based on Material Design style guidelines.",
-    "repoUrl": "https://github.com/CollaborativeTeam/challenge/tree/develop-genaro",
-    "projectUrl": "https://challenge-cyan.vercel.app/",
-    "isCollaborative": false
-  },
-  {
-    "title": "Password Generator",
-    "imgUrl": "/img/projects/password-generator.webp",
-    "technologies": ["html", "css", "javascript"],
-    "imgDescription": "Password generator website preview",
-    "description": "A custom and secure password generator. The combination of numbers, symbols, and upper, lower and mixed case result in a wide variety of combinations. Made with vanilla JS.",
-    "repoUrl": "https://github.com/GenaroIBC/password-generator",
-    "projectUrl": "https://pass-generator-2022.netlify.app/",
     "isCollaborative": false
   }
 ]
