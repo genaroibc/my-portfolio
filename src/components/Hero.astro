@@ -1,19 +1,11 @@
 ---
 import GitHubLogo from "./animated-icons/GitHubLogo.astro";
 import LinkedinLogo from "./animated-icons/LinkedinLogo.astro";
-import OvalShadow from "./shared/OvalShadow.astro";
 ---
 
 <section>
   <h1 class="title">Genaro Bonavita</h1>
   <h2 class="subtitle">Frontend Developer</h2>
-
-  <div class="ovalShadowContainerOne">
-    <OvalShadow />
-  </div>
-  <div class="ovalShadowContainerTwo">
-    <OvalShadow />
-  </div>
 
   <div class="info">
     <p class="paragraph">
@@ -39,32 +31,6 @@ import OvalShadow from "./shared/OvalShadow.astro";
 </section>
 
 <style>
-  .ovalShadowContainerOne,
-  .ovalShadowContainerTwo {
-    position: absolute;
-    z-index: -100;
-
-    animation: 15s ease-in-out infinite both;
-    overflow: hidden;
-  }
-
-  .ovalShadowContainerOne {
-    top: 40%;
-    left: -20%;
-
-    rotate: 180deg;
-    animation-direction: alternate;
-    animation-name: ovalShadowFloatingOne;
-  }
-
-  .ovalShadowContainerTwo {
-    right: 0;
-    top: 10%;
-
-    animation-direction: alternate-reverse;
-    animation-name: ovalShadowFloatingTwo;
-  }
-
   .downloadCvBtn {
     padding: 1rem 2rem;
     border-radius: 2rem;
@@ -158,24 +124,6 @@ import OvalShadow from "./shared/OvalShadow.astro";
     }
     .title {
       font-size: 4rem;
-    }
-  }
-
-  @keyframes ovalShadowFloatingOne {
-    from {
-      transform: translateY(200px);
-    }
-    to {
-      transform: translateY(-100px);
-    }
-  }
-
-  @keyframes ovalShadowFloatingTwo {
-    from {
-      transform: translateY(-100px);
-    }
-    to {
-      transform: translateY(200px);
     }
   }
 
