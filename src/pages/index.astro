@@ -16,3 +16,73 @@ import Layout from "src/layouts/Layout.astro";
   <Skills />
   <Contact />
 </Layout>
+
+<div id="mouse-follower-container">
+  <span></span>
+</div>
+
+<script>
+  (() => {
+    const cursor = document.getElementById("mouse-follower-container");
+    if (!cursor) return;
+
+    const cursorSpan = cursor.querySelector("span");
+    if (!cursorSpan) return;
+    let x = 0;
+    let y = 0;
+
+    document.addEventListener("mousemove", event => {
+      x = event.clientX;
+      y = event.clientY;
+    });
+
+    setInterval(() => {
+      cursorSpan.style.left = x + "px";
+      cursorSpan.style.top = y + "px";
+    }, 20);
+
+    document.addEventListener("mousedown", () => {
+      cursorSpan.style.animation = "";
+      cursorSpan.style.transform = "scale(0.5) translate(-100%, -100%)";
+    });
+    document.addEventListener("mouseup", () => {
+      cursorSpan.style.transform = "";
+      cursorSpan.style.animation = "bubbleUp 0.2s ease-out backwards";
+    });
+  })();
+</script>
+
+<style>
+  #mouse-follower-container {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99998;
+    mix-blend-mode: difference;
+    filter: grayscale(1);
+  }
+
+  #mouse-follower-container > span {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: translate(-50%, -50%) scale(1);
+    transition: ease-out 0.1s;
+    transition-property: left, top, transform;
+  }
+
+  @keyframes bubbleUp {
+    0% {
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+</style>
