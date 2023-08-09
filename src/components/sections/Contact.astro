@@ -8,26 +8,32 @@ import LinkedinLogo from "../animated-icons/LinkedinLogo.astro";
   <article>
     <p class="ctaParagraph">Let's build something amazing!</p>
     <ul class="contactNavbar">
-      <li class="contactNavbar__contactItem">
-        <a title="Visit my work at GitHub" href="https://github.com/genaroibc">
+      <li>
+        <a
+          class="contactNavbar__contactItemLink"
+          title="Visit my work at GitHub"
+          href="https://github.com/genaroibc"
+        >
           <GitHubLogo />
           My work
         </a>
       </li>
 
-      <li class="contactNavbar__contactItem">
+      <li>
         <a
+          class="contactNavbar__contactItemLink"
           title="Connect with me at LinkedIn"
-          href="https://github.com/GenaroIBC"
+          href="https://www.linkedin.com/in/genaro-bonavita"
         >
           <LinkedinLogo />
           Connect
         </a>
       </li>
 
-      <li class="contactNavbar__contactItem">
+      <li>
         <a
-          title="Connect with me at LinkedIn"
+          class="contactNavbar__contactItemLink"
+          title="Send me an e-mail"
           href="https://mail.google.com/mail/u/0/?tf=cm&source=mailto&su=Hi+Genaro,+it+would+be+nice+to+work+together&to=bonavitaismael@gmail.com"
         >
           <svg
@@ -82,25 +88,25 @@ import LinkedinLogo from "../animated-icons/LinkedinLogo.astro";
     margin: 0 auto;
   }
 
-  .contactNavbar__contactItem {
+  li {
     width: 5rem;
     width: 5rem;
 
     aspect-ratio: 1/1;
     line-height: 1;
     text-align: center;
+  }
 
+  .contactNavbar__contactItemLink {
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2;
+    color: currentColor;
     transition: filter 0.15s ease;
     filter: brightness(0.8);
   }
 
-  .contactNavbar__contactItem a {
-    text-decoration: none;
-    font-size: 1rem;
-    line-height: 2;
-  }
-
-  .contactNavbar__contactItem:hover {
+  .contactNavbar__contactItemLink:hover {
     filter: brightness(100%);
   }
 </style>
