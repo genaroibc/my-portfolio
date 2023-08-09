@@ -20,7 +20,7 @@
   {
     "title": "TailwindHub",
     "imgUrl": "/img/projects/tailwindhub.webp",
-    "technologies": ["nextjs", "react", "typescript", "tailwind"],
+    "technologies": ["nextjs", "react", "typescript", "tailwind", "cloudinary"],
     "imgDescription": "TailwindHub website preview",
     "description": "An open-source platform to share UI components using TailwindCSS. Create your component with its integrated code editor, login with GitHub and share it to the community.",
     "repoUrl": "https://github.com/genaroibc/tailwindhub",
