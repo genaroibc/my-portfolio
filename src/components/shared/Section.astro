@@ -8,28 +8,20 @@ const { title, id } = Astro.props;
 ---
 
 <section class="pageSection" id={id}>
-  <h3 class="sectionTitle">{title}</h3>
+  <a href={`#${id}`}><h3 class="sectionTitle">{title}</h3></a>
 
   <slot />
 </section>
 
 <style>
+  a:hover {
+    color: var(--complement-color);
+  }
+
   .pageSection {
-    margin: 20vh auto;
+    margin: 7rem auto;
     padding: 1rem;
     transform: translateY(3rem);
-    opacity: 0;
-  }
-
-  .pageSection.visible {
-    animation: fadeIn 0.5s ease-in-out both;
-  }
-
-  @keyframes fadeIn {
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 
   .sectionTitle {

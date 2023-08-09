@@ -1,0 +1,114 @@
+---
+import projectsMap from "src/assets/maps/projectsMap.json";
+import Section from "src/components/shared/Section.astro";
+import Icon from "../shared/Icon.astro";
+import type { IconName } from "src/types";
+// import ProjectPicture from "../shared/ProjectPicture.astro";
+// projectUrl={projectUrl}
+// repoUrl={repoUrl}
+---
+
+<Section id="projects" title="My projects">
+  <div class="projects_container">
+    {
+      projectsMap.map(
+        ({ description, imgDescription, imgUrl, technologies, title }) => (
+          <article class="project_card">
+            <img class="project_card__img" alt={imgDescription} src={imgUrl} />
+
+            <section class="project_card__info">
+              <div>
+                <h5>{title}</h5>
+                <p>{description}</p>
+              </div>
+
+              <ul class="project_card__info__technologies">
+                {technologies.map(tech => (
+                  <li class="project_card__info__technologies__item">
+                    <Icon name={tech as IconName} size="small" />
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </article>
+        )
+      )
+    }
+  </div>
+
+  <p class="cta__paragraph">
+    Want to see more? <a href="https://github.com/genaroibc"
+      >Check out my GitHub profile</a
+    >
+  </p>
+</Section>
+
+<script>
+  const $ = (selector: string) => document.querySelector(selector);
+  const $$ = (selector: string) => document.querySelectorAll(selector);
+  const $container = $(".projects_container");
+
+  const $projectCards = $$(".project_card");
+  console.log($projectCards);
+
+  document.addEventListener("scroll", () =>
+    console.log(scrollY, $container?.clientHeight)
+  );
+</script>
+<style>
+  .projects_container {
+    display: flex;
+    min-height: 90vh;
+    max-height: 90vh;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .project_card {
+    scroll-snap-align: center;
+    background-color: #000;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+    min-height: 90vh;
+    width: 100%;
+    /* min-height: 90vh; */
+  }
+
+  .project_card__info__technologies {
+    display: flex;
+    gap: 0.5rem;
+    background-color: #d2ddff;
+
+    border-radius: 4px;
+    padding: 0.5rem;
+    align-items: center;
+    width: fit-content;
+    align-self: end;
+  }
+
+  .project_card__info__technologies__item {
+    display: flex;
+    align-items: center;
+    align-self: end;
+  }
+
+  .cta__paragraph {
+    text-align: center;
+    margin: 3rem auto;
+  }
+
+  .project_card__img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  @media screen and (min-width: 768px) {
+  }
+</style>
