@@ -77,6 +77,21 @@ import ProjectPicture from "../shared/ProjectPicture.astro";
     overflow: hidden;
     border-radius: 1rem;
     position: relative;
+
+    animation: fadeIn linear both;
+    animation-timeline: view(block);
+    animation-range: entry 60% entry 110%;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(4rem) scale(0.6);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 
   .project_card.is_collaborative::after {
