@@ -1,23 +1,5 @@
 [
   {
-    "title": "IKodi",
-    "imgUrl": "/img/projects/ikodi.webp",
-    "technologies": [
-      "nextjs",
-      "mongodb",
-      "react",
-      "typescript",
-      "jest",
-      "testing-library",
-      "css"
-    ],
-    "imgDescription": "IKodi website preview",
-    "description": "My personal blog, where I share my knowledge writing posts about web development.",
-    "repoUrl": "https://github.com/GenaroIBC/ikodi",
-    "projectUrl": "https://ikodi.vercel.app/",
-    "isCollaborative": false
-  },
-  {
     "title": "TailwindHub",
     "imgUrl": "/img/projects/tailwindhub.webp",
     "technologies": ["nextjs", "react", "typescript", "tailwind", "cloudinary"],
@@ -38,23 +20,21 @@
     "isCollaborative": false
   },
   {
-    "title": "wc-notify",
-    "imgUrl": "/img/projects/wc-notify.webp",
-    "technologies": ["typescript", "javascript", "node", "css"],
-    "imgDescription": "wc-notify website preview",
-    "description": "An npm package to show simple and customizable toast notifications.",
-    "repoUrl": "https://github.com/GenaroIBC/wc-notify",
-    "projectUrl": "https://codesandbox.io/s/wc-notify-demo-nn687m",
-    "isCollaborative": false
-  },
-  {
-    "title": "InfoJobs UI",
-    "imgUrl": "/img/projects/infojobs-ui.webp",
-    "technologies": ["typescript", "react", "tailwind"],
-    "imgDescription": "InfoJobs UI website preview",
-    "description": "A components library for React that follows the InfoJobs style guide.",
-    "repoUrl": "https://github.com/GenaroIBC/infojobs-ui",
-    "projectUrl": "https://infojobs-ui.vercel.app/",
+    "title": "IKodi",
+    "imgUrl": "/img/projects/ikodi.webp",
+    "technologies": [
+      "nextjs",
+      "mongodb",
+      "react",
+      "typescript",
+      "jest",
+      "testing-library",
+      "css"
+    ],
+    "imgDescription": "IKodi website preview",
+    "description": "My personal blog, where I share my knowledge writing posts about web development.",
+    "repoUrl": "https://github.com/GenaroIBC/ikodi",
+    "projectUrl": "https://ikodi.vercel.app/",
     "isCollaborative": false
   },
   {
@@ -82,16 +62,6 @@
     "description": "Generate blog drafts from just a title. Summarize, extend or regenerate each paragraph and then export it in HTML, Markdown or plain text.",
     "repoUrl": "https://github.com/GenaroIBC/quick-papper",
     "projectUrl": "https://quick-papper.vercel.app/",
-    "isCollaborative": false
-  },
-  {
-    "title": "Shape Snap",
-    "imgUrl": "/img/projects/shape-snap.webp",
-    "technologies": ["react", "typescript", "tailwind", "cloudinary"],
-    "imgDescription": "Shape Snap website preview",
-    "description": "A generator of banners for social networks like Twitter, LinkedIn and Youtube.",
-    "repoUrl": "https://github.com/GenaroIBC/shape-snap",
-    "projectUrl": "https://shape-snap.vercel.app/",
     "isCollaborative": false
   }
 ]
