@@ -9,7 +9,11 @@ import LinkedinLogo from "./animated-icons/LinkedinLogo.astro";
 
   <div class="info">
     <p class="paragraph">
-      I create solutions and solve problems through clean and maintainable code.
+      I <span class="highlighted">create solutions</span> and <span
+        class="highlighted">solve problems</span
+      > through <span class="highlighted">clean</span> and <span
+        class="highlighted">maintainable code</span
+      >
     </p>
 
     <nav class="contactNavbar">
@@ -60,7 +64,6 @@ import LinkedinLogo from "./animated-icons/LinkedinLogo.astro";
   }
 
   .contactNavbar__contactItem {
-    width: 2rem;
     width: 2rem;
 
     aspect-ratio: 1/1;
@@ -148,5 +151,10 @@ import LinkedinLogo from "./animated-icons/LinkedinLogo.astro";
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  .highlighted {
+    color: #ff5656;
+    font-weight: 600;
   }
 </style>
