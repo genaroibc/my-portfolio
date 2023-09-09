@@ -1,15 +1,17 @@
 <article class="hackathonWinnerArticle">
   <h4>CloudCreate hackathon 2nd place winner 🥈</h4>
   <div class="articleContentWrapper">
-    <video
-      width="500"
-      class="hackathonProjectVideo"
-      src="/video/clippitt-preview.mp4"
-      autoplay
-      loop
-      muted
-    >
-    </video>
+    <div class="videoWrapper">
+      <video
+        width="500"
+        class="hackathonProjectVideo"
+        src="/video/clippitt-preview.mp4"
+        autoplay
+        loop
+        muted
+      >
+      </video>
+    </div>
 
     <p>
       The <b>CloudCreate hackathon</b>, presented by
@@ -59,8 +61,16 @@
     border-radius: 1rem;
   }
 
+  .videoWrapper {
+    background-image: url(/img/bg.webp);
+    background-size: 100% 100%;
+    padding: 3rem;
+  }
+
   .hackathonProjectVideo {
-    width: 100%;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
     border-radius: 1rem;
   }
 </style>
